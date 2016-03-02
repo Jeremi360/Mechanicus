@@ -1,0 +1,196 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://scripts/dwig.gd" type="Script" id=1]
+[ext_resource path="res://sprites/mechs/dwigbasenew.png" type="Texture" id=2]
+[ext_resource path="res://sprites/mechs/chainD.png" type="Texture" id=3]
+[ext_resource path="res://sprites/ui/hud_x35.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/hud_gem_green.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/hud_gem_blue.png" type="Texture" id=6]
+[ext_resource path="res://sprites/mechs/dwigactionN.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34, 15 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 150, 10 )
+
+[node name="Dwig" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+edit_on_ready = true
+
+[node name="Base" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 40.2627, 0.970604 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 6 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="Base"]
+
+transform/pos = Vector2( 0.195254, -0.335574 )
+transform/scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Base"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+
+[node name="Position2D" type="Position2D" parent="Base"]
+
+transform/pos = Vector2( 10, -85 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base"]
+
+transform/pos = Vector2( 0, 6 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = -1
+
+[node name="Sprite2" type="Sprite" parent="Base"]
+
+transform/pos = Vector2( 1, -22 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="Base"]
+
+margin/left = -25.0
+margin/top = -18.0
+margin/right = 26.0
+margin/bottom = 25.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = true
+
+[node name="EditButton" type="Button" parent="Base"]
+
+margin/left = -62.0
+margin/top = -62.0
+margin/bottom = -18.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 5 )
+flat = true
+
+[node name="info" type="Button" parent="Base"]
+
+margin/top = -61.0
+margin/right = 62.0
+margin/bottom = -17.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Action" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( -12, -40 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="Action"]
+
+transform/scale = Vector2( 1, 0.413133 )
+texture = ExtResource( 7 )
+
+[node name="PosEnd" type="Position2D" parent="Action"]
+
+transform/pos = Vector2( 150, 0 )
+
+[node name="PosStart" type="Position2D" parent="Action"]
+
+transform/pos = Vector2( -150, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action"]
+
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = -1
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 40.2627, -39.0294 )
+z/z = 1
+node_a = NodePath("../Action")
+node_b = NodePath("../Base")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[connection signal="pressed" from="Base/Button" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="Base/EditButton" to="." method="_on_edit"]
+
+[connection signal="pressed" from="Base/info" to="." method="on_info"]
+
+

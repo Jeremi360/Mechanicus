@@ -1,0 +1,719 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://scripts/chain.gd" type="Script" id=1]
+[ext_resource path="res://sprites/mechs/chainN.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/hud_x35.png" type="Texture" id=3]
+[ext_resource path="res://sprites/mechs/chainF.png" type="Texture" id=4]
+[ext_resource path="res://sprites/mechs/chainD.png" type="Texture" id=5]
+[ext_resource path="res://scripts/chainBall.gd" type="Script" id=6]
+[ext_resource path="res://sprites/mechs/Ball.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ui/hud_gem_green.png" type="Texture" id=8]
+[ext_resource path="res://sprites/ui/hud_gem_blue.png" type="Texture" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -0.817131, 45.9713, -31.259, 14.8159, -51.2365, -17.2908, 49.3644, -17.5286, 29.1491, 15.2915 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -51.4743, 3.87584, -51.2365, -17.2908, -31.259, 14.8159 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 49.3644, 3.87584, 29.1491, 15.2915, 49.3644, -17.5286 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 12.0
+height = 25.0
+
+[sub_resource type="CapsuleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 7.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id=6]
+
+custom_solver_bias = 0.0
+radius = 35.0
+
+[node name="Chain" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+[node name="Hollder" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 1, -76 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, -7.62939e-06, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, -0, 0, 1, -7.62939e-06, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 3 )
+shapes/2/transform = Matrix32( 1, -0, 0, 1, -7.62939e-06, 0 )
+shapes/2/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="Hollder"]
+
+transform/pos = Vector2( -1.13672, 13.8013 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Hollder"]
+
+transform/pos = Vector2( -7.62939e-06, 0 )
+build_mode = 0
+polygon = Vector2Array( 49.3644, -17.5286, 49.3644, 3.87584, 29.1491, 15.2915, -0.817131, 45.9713, -31.259, 14.8159, -51.4743, 3.87584, -51.2365, -17.2908 )
+shape_range = Vector2( -1, -1 )
+trigger = false
+
+[node name="Button" type="Button" parent="Hollder"]
+
+margin/left = -25.0
+margin/top = -21.0
+margin/right = 26.0
+margin/bottom = 22.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 3 )
+flat = true
+
+[node name="ChainF" type="RigidBody2D" parent="."]
+
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainF"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainF"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( -1.22772, -34 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainF1" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 66 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainF1"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainF1"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD1" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 32 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD1"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD1"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD2" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 101 )
+z/z = 2
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD2"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD2"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainF2" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 135 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainF2"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainF2"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainF3" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 195 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainF3"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainF3"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD3" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 161 )
+z/z = 2
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD3"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD3"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD4" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 225 )
+z/z = 2
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD4"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD4"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainF4" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 259 )
+z/z = 1
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainF4"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainF4"]
+
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = -1
+
+[node name="ChainD5" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 288 )
+z/z = 2
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="ChainD5"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainD5"]
+
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = -1
+
+[node name="Ball" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 0, 331 )
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( -300, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 6 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+
+texture = ExtResource( 7 )
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = -1
+
+[node name="Button" type="Button" parent="Ball"]
+
+margin/left = -23.0
+margin/top = 8.0
+margin/right = 28.0
+margin/bottom = 51.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Button1" type="Button" parent="Ball"]
+
+margin/left = -63.0
+margin/top = -23.0
+margin/right = -1.0
+margin/bottom = 21.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 8 )
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="Ball"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+
+[node name="Button2" type="Button" parent="Ball"]
+
+margin/top = -25.0
+margin/right = 62.0
+margin/bottom = 19.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 9 )
+flat = true
+
+[node name="PinJointDHollder" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, -55 )
+node_a = NodePath("../ChainD")
+node_b = NodePath("../Hollder")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointDF" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, -16 )
+node_a = NodePath("../ChainD")
+node_b = NodePath("../ChainF")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointFD1" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 19.6634 )
+node_a = NodePath("../ChainF")
+node_b = NodePath("../ChainD1")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointD1F1" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 48.6634 )
+node_a = NodePath("../ChainD1")
+node_b = NodePath("../ChainF1")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointF1D2" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 85.6634 )
+node_a = NodePath("../ChainF1")
+node_b = NodePath("../ChainD2")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointD2F2" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 117.663 )
+node_a = NodePath("../ChainD2")
+node_b = NodePath("../ChainF2")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointF2D3" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 144.663 )
+node_a = NodePath("../ChainF2")
+node_b = NodePath("../ChainD3")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointD3F3" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 178.663 )
+node_a = NodePath("../ChainD3")
+node_b = NodePath("../ChainF3")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointF3D4" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 206.663 )
+node_a = NodePath("../ChainF3")
+node_b = NodePath("../ChainD4")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointD4F4" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 241.663 )
+node_a = NodePath("../ChainD4")
+node_b = NodePath("../ChainF4")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointF4D5" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 274.663 )
+node_a = NodePath("../ChainF4")
+node_b = NodePath("../ChainD5")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[node name="PinJointD5Ball" type="PinJoint2D" parent="."]
+
+transform/pos = Vector2( 0, 307.663 )
+node_a = NodePath("../ChainD5")
+node_b = NodePath("../Ball")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
+[connection signal="pressed" from="Hollder/Button" to="." method="_on_Button"]
+
+[connection signal="pressed" from="Ball/Button" to="." method="_on_Button"]
+
+[connection signal="pressed" from="Ball/Button1" to="Ball" method="_on_edit"]
+
+[connection signal="pressed" from="Ball/Button2" to="Ball" method="on_info"]
+
+

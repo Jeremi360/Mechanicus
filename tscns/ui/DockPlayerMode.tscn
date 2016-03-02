@@ -1,0 +1,327 @@
+[gd_scene load_steps=19 format=1]
+
+[ext_resource path="res://scripts/dockPM.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/dock.png" type="Texture" id=2]
+[ext_resource path="res://scripts/DPMbuttons.gd" type="Script" id=3]
+[ext_resource path="res://sprites/mechs/box100.png" type="Texture" id=4]
+[ext_resource path="res://sprites/mechs/Ball.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/rownia3.png" type="Texture" id=6]
+[ext_resource path="res://scripts/button_rownia.gd" type="Script" id=7]
+[ext_resource path="res://sprites/ui/dwigIcon.png" type="Texture" id=8]
+[ext_resource path="res://scripts/button_dwig.gd" type="Script" id=9]
+[ext_resource path="res://sprites/ui/chain.png" type="Texture" id=10]
+[ext_resource path="res://sprites/mechs/ropeV.png" type="Texture" id=11]
+[ext_resource path="res://scripts/preScaleBox.gd" type="Script" id=12]
+[ext_resource path="res://sprites/ui/Box.png" type="Texture" id=13]
+[ext_resource path="res://fonts/ubunu64.fnt" type="Font" id=14]
+[ext_resource path="res://scripts/prePosBox.gd" type="Script" id=15]
+[ext_resource path="res://sprites/ui/dwig05s.png" type="Texture" id=16]
+[ext_resource path="res://sprites/ui/dwig05m.png" type="Texture" id=17]
+[ext_resource path="res://sprites/ui/dwig05e.png" type="Texture" id=18]
+
+[node name="DockPlayerMode" type="Node2D"]
+
+transform/pos = Vector2( 433.634, 51.7656 )
+transform/scale = Vector2( 1, 0.56018 )
+z/z = 5
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+offset = Vector2( 0, -250 )
+
+[node name="SpriteBg" type="Sprite" parent="."]
+
+transform/pos = Vector2( -75.9297, 11.4608 )
+transform/scale = Vector2( 1.19516, 1.07693 )
+z/z = -1
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="BoxButton" type="Button" parent="."]
+
+margin/left = -417.0
+margin/top = -72.0
+margin/right = -297.0
+margin/bottom = 64.0
+hint/tooltip = "Szescian"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = false
+
+[node name="BallButton" type="Button" parent="."]
+
+margin/left = -288.0
+margin/top = -72.0
+margin/right = -195.0
+margin/bottom = 71.0
+hint/tooltip = "Szescian"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 5 )
+flat = false
+
+[node name="RowniaButton" type="Button" parent="."]
+
+margin/left = -188.0
+margin/top = -70.0
+margin/right = -64.0
+margin/bottom = 67.0
+hint/tooltip = "Rownia Pochyla"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 6 )
+flat = false
+script/script = ExtResource( 7 )
+
+[node name="DzwigniaButton" type="Button" parent="."]
+
+margin/left = -58.0
+margin/top = -70.0
+margin/right = 58.0
+margin/bottom = 68.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 8 )
+flat = false
+script/script = ExtResource( 9 )
+
+[node name="ChainButton" type="Button" parent="."]
+
+margin/left = 65.0
+margin/top = -68.0
+margin/right = 157.0
+margin/bottom = 66.0
+hint/tooltip = "Wachadłlo"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 10 )
+flat = false
+
+[node name="SpringButton" type="Button" parent="."]
+
+margin/left = 163.0
+margin/top = -72.0
+margin/right = 249.0
+margin/bottom = 69.0
+hint/tooltip = "Sprezyna z Obciaznikiem"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 11 )
+flat = false
+
+[node name="PreScaleBox" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( -126.374, 235.705 )
+transform/scale = Vector2( 0.271905, 0.388805 )
+script/script = ExtResource( 12 )
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="PreScaleBox"]
+
+transform/pos = Vector2( 1.62462, 168.908 )
+transform/scale = Vector2( 1.17691, 1.55836 )
+texture = ExtResource( 13 )
+
+[node name="Button1x1y" type="Button" parent="PreScaleBox"]
+
+margin/left = -242.0
+margin/top = -338.0
+margin/right = 230.0
+margin/bottom = -148.0
+hint/tooltip = "Skala"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "x 184, y 171"
+flat = false
+
+[node name="Button2x1y" type="Button" parent="PreScaleBox"]
+
+margin/left = -242.0
+margin/top = -128.0
+margin/right = 230.0
+margin/bottom = 62.0
+hint/tooltip = "Skala"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "x 386, y 171"
+flat = false
+
+[node name="Button1x2y" type="Button" parent="PreScaleBox"]
+
+margin/left = -242.0
+margin/top = 82.0
+margin/right = 230.0
+margin/bottom = 272.0
+hint/tooltip = "Skala"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "x 184, y 240"
+flat = false
+
+[node name="Button2x2y" type="Button" parent="PreScaleBox"]
+
+margin/left = -242.0
+margin/top = 292.0
+margin/right = 230.0
+margin/bottom = 482.0
+hint/tooltip = "Skala"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "x 386, y 240"
+flat = false
+
+[node name="Anuluj" type="Button" parent="PreScaleBox"]
+
+margin/left = -242.0
+margin/top = 502.0
+margin/right = 230.0
+margin/bottom = 692.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "Anuluj"
+flat = false
+
+[node name="PrePosBox" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( -0.531253, 292.689 )
+transform/scale = Vector2( 0.367822, 0.525785 )
+script/script = ExtResource( 15 )
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="PrePosBox"]
+
+transform/pos = Vector2( 16.595, 30.9654 )
+transform/scale = Vector2( 0.852146, 1.19149 )
+texture = ExtResource( 13 )
+
+[node name="ButtonStart" type="Button" parent="PrePosBox"]
+
+margin/left = -178.0
+margin/top = -303.0
+margin/right = 152.0
+margin/bottom = -175.0
+hint/tooltip = "miejsce przylozenia"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 16 )
+flat = true
+
+[node name="ButtonMiddle" type="Button" parent="PrePosBox"]
+
+margin/left = -178.0
+margin/top = -131.0
+margin/right = 152.0
+margin/bottom = -3.0
+hint/tooltip = "miejsce przylozenia"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 17 )
+flat = true
+
+[node name="ButtonEnd" type="Button" parent="PrePosBox"]
+
+margin/left = -173.0
+margin/top = 41.0
+margin/right = 157.0
+margin/bottom = 169.0
+hint/tooltip = "miejsce przylozenia"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 18 )
+flat = true
+
+[node name="Anuluj" type="Button" parent="PrePosBox"]
+
+margin/left = -201.0
+margin/top = 182.0
+margin/right = 271.0
+margin/bottom = 372.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 14 )
+toggle_mode = false
+text = "Anuluj"
+flat = false
+
+[connection signal="pressed" from="BoxButton" to="SpriteBg" method="_on_box"]
+
+[connection signal="pressed" from="BallButton" to="SpriteBg" method="_on_Ball"]
+
+[connection signal="pressed" from="RowniaButton" to="RowniaButton" method="_on_RowniaButton"]
+
+[connection signal="pressed" from="DzwigniaButton" to="DzwigniaButton" method="_on_Dzwignia"]
+
+[connection signal="pressed" from="ChainButton" to="SpriteBg" method="_on_Chain"]
+
+[connection signal="pressed" from="SpringButton" to="SpriteBg" method="_on_Spring"]
+
+[connection signal="pressed" from="PreScaleBox/Button1x1y" to="PreScaleBox" method="_on_1x1y"]
+
+[connection signal="pressed" from="PreScaleBox/Button2x1y" to="PreScaleBox" method="_on_2x1y"]
+
+[connection signal="pressed" from="PreScaleBox/Button1x2y" to="PreScaleBox" method="_on_1x2y"]
+
+[connection signal="pressed" from="PreScaleBox/Button2x2y" to="PreScaleBox" method="_on_2x2y"]
+
+[connection signal="pressed" from="PreScaleBox/Anuluj" to="PreScaleBox" method="_on_Anuluj"]
+
+[connection signal="pressed" from="PrePosBox/ButtonStart" to="PrePosBox" method="_on_Start"]
+
+[connection signal="pressed" from="PrePosBox/ButtonMiddle" to="PrePosBox" method="_on_Middle"]
+
+[connection signal="pressed" from="PrePosBox/ButtonEnd" to="PrePosBox" method="_on_End"]
+
+[connection signal="pressed" from="PrePosBox/Anuluj" to="PrePosBox" method="_on_Anuluj"]
+
+

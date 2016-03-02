@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="15" version="1.1" version_name="Godot Engine v1.1.stable.custom_build">
+	<ext_resource path="res://scripts/MechList.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/Box.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/boxBALLicon.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/rownia3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/dwigIcon.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/chain.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/mechs/ropeV.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/hud_x.png" type="Texture"></ext_resource>
+	<ext_resource path="res://fonts/ubunu64.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://fonts/ubunt32I.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://fonts/ubunt32.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://sprites/mechs/rownia3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://xmls/ui/chainImg.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://xmls/ui/springImg.xml" type="PackedScene"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 8 </int>
+			<string> "conns" </string>
+			<int_array  len="53"> 				3, 0, 56, 55, 2, 1, 106, 4, 0, 56, 55, 2, 1, 0, 5, 0, 56, 55, 2, 1, 107, 6, 0, 56, 55, 2, 1, 108, 7, 0, 56, 55, 2, 1, 3, 8, 0, 56, 57, 2, 0, 9, 0, 56, 58, 2, 0, 10, 0, 56, 59, 2, 0 </int_array>
+			<string> "names" </string>
+			<string_array  len="60">
+				<string> "MechList" </string>
+				<string> "Node2D" </string>
+				<string> "process/pause_mode" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "z/z" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "debug" </string>
+				<string> "SpriteBg1" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "flip_v" </string>
+				<string> "Control" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "GoToPage1" </string>
+				<string> "Button" </string>
+				<string> "hint/tooltip" </string>
+				<string> "toggle_mode" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "GoToPage2" </string>
+				<string> "GoToPage3" </string>
+				<string> "GoToPage4" </string>
+				<string> "GoToPage5" </string>
+				<string> "Exit" </string>
+				<string> "Nextb" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "text" </string>
+				<string> "Prevb" </string>
+				<string> "Page1" </string>
+				<string> "Label" </string>
+				<string> "RichTextLabel" </string>
+				<string> "custom_fonts/bold_italics_font" </string>
+				<string> "custom_fonts/italics_font" </string>
+				<string> "custom_fonts/bold_font" </string>
+				<string> "custom_fonts/normal_font" </string>
+				<string> "bbcode/enabled" </string>
+				<string> "bbcode/bbcode" </string>
+				<string> "visible_characters" </string>
+				<string> "Page2" </string>
+				<string> "visibility/visible" </string>
+				<string> "Page3" </string>
+				<string> "Page4" </string>
+				<string> "Chain" </string>
+				<string> "_import_path" </string>
+				<string> "Page5" </string>
+				<string> "Spring" </string>
+				<string> "_go_to_page" </string>
+				<string> "pressed" </string>
+				<string> "_on_Exit_pressed" </string>
+				<string> "_on_Nextb_pressed" </string>
+				<string> "_on_Prevb_pressed" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 24 </int>
+			<string> "nodes" </string>
+			<int_array  len="662"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 0, 0, 0, 10, 9, -1, 5, 3, 7, 4, 8, 5, 9, 11, 10, 12, 11, 0, 0, 0, 13, 13, -1, 9, 14, 12, 15, 13, 16, 14, 17, 15, 18, 6, 19, 11, 20, 0, 21, 0, 7, 16, 0, 2, 0, 23, 22, -1, 12, 14, 17, 15, 18, 16, 19, 17, 20, 24, 21, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 22, 27, 6, 0, 2, 0, 23, 28, -1, 12, 14, 23, 15, 24, 16, 25, 17, 26, 24, 27, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 28, 27, 6, 0, 2, 0, 23, 29, -1, 11, 14, 29, 15, 24, 16, 30, 17, 31, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 32, 27, 6, 0, 2, 0, 23, 30, -1, 12, 14, 33, 15, 34, 16, 35, 17, 36, 24, 37, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 38, 27, 6, 0, 2, 0, 23, 31, -1, 12, 14, 39, 15, 18, 16, 40, 17, 41, 24, 42, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 43, 27, 6, 0, 2, 0, 23, 32, -1, 12, 14, 44, 15, 45, 16, 46, 17, 20, 24, 47, 18, 6, 19, 11, 20, 0, 21, 0, 25, 6, 26, 48, 27, 6, 0, 2, 0, 23, 33, -1, 13, 14, 49, 15, 50, 16, 51, 17, 52, 24, 53, 18, 6, 19, 11, 20, 0, 21, 0, 34, 54, 25, 6, 35, 55, 27, 6, 0, 2, 0, 23, 36, -1, 13, 14, 56, 15, 57, 16, 58, 17, 59, 24, 53, 18, 6, 19, 11, 20, 0, 21, 0, 34, 54, 25, 6, 35, 60, 27, 6, 0, 0, 0, 13, 37, -1, 7, 16, 61, 17, 61, 18, 6, 19, 11, 20, 0, 21, 0, 7, 62, 0, 11, 0, 39, 38, -1, 15, 14, 63, 15, 64, 16, 65, 17, 66, 18, 11, 19, 11, 20, 0, 21, 0, 40, 67, 41, 67, 42, 54, 43, 68, 44, 11, 45, 69, 46, 9, 0, 0, 0, 13, 47, -1, 9, 48, 6, 14, 70, 16, 71, 17, 61, 18, 6, 19, 11, 20, 0, 21, 0, 7, 72, 0, 13, 0, 10, 10, -1, 4, 3, 73, 4, 74, 5, 9, 11, 75, 0, 13, 0, 39, 38, -1, 15, 14, 76, 15, 30, 16, 77, 17, 78, 18, 6, 19, 11, 20, 0, 21, 0, 40, 68, 41, 67, 42, 54, 43, 68, 44, 11, 45, 79, 46, 9, 0, 0, 0, 13, 49, -1, 9, 48, 6, 14, 70, 16, 71, 17, 61, 18, 6, 19, 11, 20, 0, 21, 0, 7, 80, 0, 16, 0, 39, 38, -1, 15, 14, 81, 15, 82, 16, 83, 17, 84, 18, 11, 19, 11, 20, 0, 21, 0, 40, 67, 41, 67, 42, 54, 43, 68, 44, 11, 45, 85, 46, 9, 0, 0, 0, 13, 50, -1, 9, 48, 6, 14, 70, 16, 71, 17, 61, 18, 6, 19, 11, 20, 0, 21, 0, 7, 86, 0, 18, 0, 1, 51, 87, 3, 52, 88, 3, 89, 7, 90, 0, 18, 0, 39, 38, -1, 15, 14, 91, 15, 92, 16, 93, 17, 94, 18, 11, 19, 11, 20, 0, 21, 0, 40, 68, 41, 67, 42, 54, 43, 68, 44, 11, 45, 95, 46, 9, 0, 0, 0, 13, 53, -1, 9, 48, 6, 14, 70, 16, 71, 17, 61, 18, 6, 19, 11, 20, 0, 21, 0, 7, 96, 0, 21, 0, 1, 54, 97, 4, 52, 88, 3, 98, 4, 99, 7, 100, 0, 21, 0, 39, 38, -1, 15, 14, 101, 15, 102, 16, 103, 17, 104, 18, 11, 19, 11, 20, 0, 21, 0, 40, 67, 41, 67, 42, 54, 43, 68, 44, 11, 45, 105, 46, 9, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="109" shared="false">
+				<int> 2 </int>
+				<vector2> 438.066, 78.3584 </vector2>
+				<vector2> 1, 0.56018 </vector2>
+				<int> 5 </int>
+				<resource  resource_type="Script" path="res://scripts/MechList.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -222.498, 68.3656 </vector2>
+							<string> "snap_grid" </string>
+							<bool> False </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.814506 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
+				<bool> False </bool>
+				<vector2> 86.85, 517.029 </vector2>
+				<vector2> 1.27935, 1.58455 </vector2>
+				<int> -1 </int>
+				<resource  resource_type="Texture" path="res://sprites/ui/Box.png">  </resource>
+				<bool> True </bool>
+				<real> 71 </real>
+				<real> 27 </real>
+				<real> 111 </real>
+				<real> 67 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> -406 </real>
+				<real> -56 </real>
+				<real> -140 </real>
+				<real> 80 </real>
+				<string> "Szescian" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/boxBALLicon.png">  </resource>
+				<real> -128 </real>
+				<real> -54 </real>
+				<real> -4 </real>
+				<real> 83 </real>
+				<string> "Rownia Pochyla" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/rownia3.png">  </resource>
+				<real> 2 </real>
+				<real> 118 </real>
+				<real> 84 </real>
+				<resource  resource_type="Texture" path="res://sprites/ui/dwigIcon.png">  </resource>
+				<real> 125 </real>
+				<real> -52 </real>
+				<real> 217 </real>
+				<real> 82 </real>
+				<string> "Wachadłlo" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/chain.png">  </resource>
+				<real> 223 </real>
+				<real> 309 </real>
+				<real> 85 </real>
+				<string> "Sprezyna z Obciaznikiem" </string>
+				<resource  resource_type="Texture" path="res://sprites/mechs/ropeV.png">  </resource>
+				<real> 318 </real>
+				<real> -53 </real>
+				<real> 404 </real>
+				<string> "Zamknij" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/hud_x.png">  </resource>
+				<real> -410 </real>
+				<real> 726 </real>
+				<real> 214 </real>
+				<real> 859 </real>
+				<string> "Dalej" </string>
+				<resource  resource_type="Font" path="res://fonts/ubunu64.fnt">  </resource>
+				<string> "Kolejna maszyna" </string>
+				<real> -335 </real>
+				<real> 880 </real>
+				<real> 365 </real>
+				<real> 1013 </real>
+				<string> "Poprzednia maszyna" </string>
+				<real> 40 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> -277 </real>
+				<real> 121 </real>
+				<real> 460 </real>
+				<real> 739 </real>
+				<resource  resource_type="Font" path="res://fonts/ubunt32I.fnt">  </resource>
+				<resource  resource_type="Font" path="res://fonts/ubunt32.fnt">  </resource>
+				<string> "[b]Dynamika bryły sztywnej[/b]&#000a;&#000a;[img]res://sprites/mechs/box.png[/img] [img]res://sprites/mechs/ballboxs.png[/img]&#000a;&#000a;[b]Spis treści[/b]&#000a;&#000a; - [url=#Wst.C4.99p]1 Wstęp[/url]&#000a; - [url=#Momenty_bezw.C5.82adno.C5.9Bci_wybranych_cia.C5.82]2 Momenty bezwładności wybranych ciał[/url]&#000a; - [url=#Twierdzenie_Steinera]3 Twierdzenie Steinera[/url]&#000a; - [url=#Cechy_momentu_si.C5.82y]4 Cechy momentu siły[/url]&#000a; - [url=#Praktyka]5 Praktyka[/url]&#000a; - [url=#Moment_p.C4.99du]6 Moment pędu[/url]&#000a; - [url=#Zasady_dynamiki_ruchu_obrotowego]7 Zasady dynamiki ruchu obrotowego[/url]&#000a; - [url=#Zasada_zachowania_momentu_p.C4.99du]8 Zasada zachowania momentu pędu[/url]&#000a; - [url=#Energia_kinetyczna_ruchu_obrotowego]9 Energia kinetyczna ruchu obrotowego[/url]&#000a; - [url=#Energia_kinetyczna_tocz.C4.85cego_si.C4.99_cia.C5.82a]10 Energia kinetyczna toczącego się ciała[/url]&#000a;&#000a;[b]Wstęp[/b]&#000a;&#000a;Aby ciało zaczęło się obracać należy podziałać na nie siłą. Efekt działania siły zależy m.in od rozłożenia masy względem osi obrotu bryły.&#000a;&#000a;[b]moment bezwładności[/b] - wielkość charakteryzująca rozłożenie masy danego ciała względem jego osi obrotu.&#000a;&#000a;Gdy podzielimy ciało na n nieskończenie małych fragmentów, wzór ma postać:[img]res://wiki/102ed9cf3cd558286015bd15fa64ecbc.png[/img]&#000a;&#000a;Gdzie m - masa fragmentu, zaś r - jego odległość od osi obrotu.&#000a;[b]Momenty bezwładności wybranych ciał[/b]&#000a;&#000a; - pręt - gdy oś obrotu jest osią symetrii pręta:[img]res://wiki/a11455bf0de0816f039ac483f22e2ac6.png[/img]- gdy oś obrotu jest prostopadła i przechodzi przez koniec pręta:[img]res://wiki/73d121d4a361329de258057e13ddcaa8.png[/img]&#000a; - rura cienkościenna[img]res://wiki/2302b0cd27751b7b1a7d0ed6b10661b3.png[/img]&#000a; - rura grubościenna[img]res://wiki/b500dbb44d3865ffab7eaeaae5c2bb3a.png[/img]&#000a; - walec/krążek[img]res://wiki/631caf76245eb68ad07a907918b20901.png[/img]&#000a; - kula[img]res://wiki/cfdc52dc15853bdfb69071d4d2193b9f.png[/img]&#000a; &#000a;[b]Twierdzenie Steinera[/b]&#000a;&#000a;Jeżeli bryła sztywna o znanym momencie bezwładności obraca się względem innej osi niż oś przechodząca przez środek ciężkości to wtedy jej moment bezwładności określa związek:[img]res://wiki/98f42f2cf6dbb2183710e734ccd8e73a.png[/img]&#000a;&#000a;d - odległość rzeczywistej osi obrotu od osi przechodzącej przez środek ciężkości&#000a;&#000a;Na ruch obrotowy bryły sztywnej ma wpływ siła wprawiająca w ruch bryłę i jej odległość od osi obrotu.&#000a;&#000a;Wielkością od której zależy ruch obrotowy bryły sztywnej jest [b]moment siły[/b].&#000a;&#000a;Moment siły jest wektorem.&#000a;&#000a;[b]Cechy momentu siły[/b]&#000a;&#000a;Moment siły jest wynikiem mnożenia wektorowego wektora wodzącego i wektora siły[img]res://wiki/09d1591f7a5f2fb5d0010aa034ff78f0.png[/img]&#000a; - wartość[img]res://wiki/c9f75c1085ff06568d9e1608cd0d2248.png[/img]&#000a; - kierunek&#000a;&#000a;Jest prostopadły do płaszczyzny utworzonej przez wektor wodzący i wektor siły&#000a; - zwrot&#000a;&#000a;Jest określony regułą śruby prawoskrętnej.&#000a;&#000a;[b]Praktyka[/b]&#000a;&#000a;Wartość momentu siły jest iloczynem siły i odległości jej wektora od osi obrotu:&#000a;&#000a;[img]res://wiki/7b259f3874e7dc6e5d84c7e1abe21842.png[/img]&#000a;[b]Moment pędu[/b]&#000a;&#000a; - wartość&#000a;&#000a;Iloczyn momentu bezwładności i prędkości kątowej:&#000a;&#000a;[img]res://wiki/d4d1b328f865c502470c90753abe5bd1.png[/img]&#000a; - kierunek&#000a;&#000a;Prostopadły do płaszczyzny obrotu bryły.&#000a; - zwrot&#000a;&#000a;Zgodny z regułą śruby prawoskrętnej.&#000a;[b]Zasady dynamiki ruchu obrotowego[/b]&#000a;&#000a;Jeżeli wypadkowy moment sił działających na ciało jest równy 0 to bryła pozostaje w spoczynku lub obraca się ze stałą prędkością kątową.&#000a;&#000a;Przyspieszenie kątowe zależy wprost proporcjonalnie od wypadkowego momentu sił i odwrotnie proporcjonalnie od momentu bezwładności bryły:&#000a;&#000a;[img]res://wiki/6ecf49e78246b25a34eb1e6ff370fc83.png[/img]&#000a;&#000a;[img]res://wiki/b580260eb666a5e30d22d9d581fc4073.png[/img]&#000a;&#000a;[img]res://wiki/cb032644f1ba8a6610086d52b3f8c2d5.png[/img]&#000a;&#000a;[img]res://wiki/d3f509c2fd6d2b3502fd16c939c87f3e.png[/img]&#000a;&#000a;[b]Zasada zachowania momentu pędu[/b]&#000a;&#000a;Moment pędu układu, na który nie działają momenty sił zewnętrznych, lub działające momenty sił równoważą się, pozostaje stały.&#000a;&#000a;[b]Energia kinetyczna ruchu obrotowego[/b]&#000a;&#000a;[img]res://wiki/9561809331bed818dca578b8d98665cd.png[/img]&#000a;&#000a;I - moment bezwładności&#000a;&#000a;[img]res://wiki/4d1b7b74aba3cfabd624e898d86b4602.png[/img] - prędkość kątowa&#000a;&#000a;Energie kinetyczne ruchu obrotowego wybranych ciał (bez poślizgu).&#000a; - walec [img]res://wiki/9cd743a9490293e9e5b18f5c0a63412c.png[/img]&#000a; - kula [img]res://wiki/bcb6f8ba015d28b05b9fb51def43cf1c.png[/img]&#000a; &#000a;[b]Energia kinetyczna toczącego się ciała[/b]&#000a;&#000a;Energia kinetyczna jest sumą energii kinetycznej ruchu postępowego i obrotowego:&#000a;&#000a;[img]res://wiki/4d4a1ff0d902ddca2c85c5a9d12d575c.png[/img]&#000a;&#000a; - dla kuli&#000a;&#000a;[img]res://wiki/51c62667b50036b74f4a3582894fd21c.png[/img]&#000a; - dla walca&#000a;&#000a;[img]res://wiki/df568b80a6ec67a246d3b2219e3e8943.png[/img]&#000a;&#000a;&#000a;" </string>
+				<real> 9 </real>
+				<real> 49 </real>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 466.116, 293.884 </vector2>
+				<vector2> 1.09633, 1.29359 </vector2>
+				<resource  resource_type="Texture" path="res://sprites/mechs/rownia3.png">  </resource>
+				<real> -370 </real>
+				<real> 381 </real>
+				<real> 720 </real>
+				<string> "[b]Równia z tarciem[/b]&#000a;&#000a;[img]res://wiki/250px-Rownia_tarcie.svg.png[/img]&#000a;&#000a;Rozkład sił na równi z uwzględnieniem siły tarcia&#000a;&#000a;Jeżeli ciało spoczywa, siła tarcia statycznego równoważy siłę wypadkową działającą na to ciało.&#000a;Siła tarcia statycznego może przyjąć tylko wartości mniejsze od wynikających z prawa tarcia.&#000a;Siła tarcia jest kolejną siłą, którą trzeba uwzględnić przy wyznaczaniu siły wypadkowej.&#000a;Warunek na spoczynek ciała na równi określa wzór:&#000a;&#000a;[img]res://wiki/aff116649395edcf34ff75d1288e8afd.png[/img]&#000a;&#000a;gdzie:[i]μs[/i] - współczynnik.&#000a;&#000a;Dla ciała poruszającego się w dół równi przyspieszenie określone jest wzorem:&#000a;&#000a;[img]res://wiki/edd9955ed98fc69d653189b1d31b5afc.png[/img],&#000a;&#000a;dodatnia wartość wskazuje przyspieszenie w dół równi, czyli ruch przyspieszony,&#000a;ujemna - przyspieszenie w górę równi, czyli ruch opóźniony.&#000a;&#000a;Dla poruszającego się w górę równi:&#000a;&#000a;[img]res://wiki/feb1dc0f39a1759fedbe60c20f163864.png[/img],&#000a;&#000a;przyspieszenie jest skierowane w dół równi, co oznacza, że ruch jest zawsze opóźniony." </string>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> -375 </real>
+				<real> 142 </real>
+				<real> 429 </real>
+				<real> 750 </real>
+				<string> "[b]Dźwignia dwustronna[/b]&#000a;&#000a;&#000a;[img]res://wiki/300px-FirstClassLever.svg.png[/img] [img]res://sprites/ui/dwig05m.png[/img]&#000a;&#000a;W dźwigni dwustronnej (dwuramiennej) siły działają po przeciwnych stronach osi obrotu rys1.&#000a;&#000a;Odległość od miejsca przyłożenia siły do osi nazywa się ramieniem dźwigni.&#000a;Dźwignia pozostaje w równowadze, gdy wypadkowy moment sił przyłożonych do niej wynosi 0.&#000a;Dla sytuacji z rys.1 można zapisać to równaniem:&#000a;&#000a;[img]res://wiki/489f2d296c97e2d2b101fcb2a2f0f69a.png[/img]&#000a;&#000a;gdzie:&#000a;&#000a; - [img]res://wiki/524461e2368b7889b800e6bb1be031bf.png[/img] – działające siły,&#000a;&#000a; - [img]res://wiki/7f12441d9715349ca9dfc6bbe07bf84b.png[/img] – ich ramiona.&#000a;&#000a;[b]Przekładnia dźwigni[/b]&#000a;&#000a;Ponieważ ramiona dźwigni są również ramionami odpowiednich sił (są do nich prostopadłe) można równanie dźwigni zapisać niewektorowo&#000a;&#000a;[img]res://wiki/18655a4c46317f9f1cef9517aefceaff.png[/img]&#000a;&#000a;skąd wynika wzór na tzw. [i]przekładnię dźwigni[/i]:&#000a;&#000a;[img]res://wiki/00e1d525e121db7d92c013d4ffdd67c4.png[/img]&#000a;&#000a;Ze wzoru tego wynika, że siła przyłożona do dźwigni jest odwrotnie proporcjonalna do długości jej ramienia.&#000a;Przekładnia dźwigni, czyli stosunek długości ramion dźwigni, informuje o tym, jaki jest zysk siły, &#000a;czyli ile razy większą siłę [i]F[/i]2 można uzyskać działając siłą [i]F[/i]1.&#000a;" </string>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  resource_type="PackedScene" path="res://xmls/ui/chainImg.xml">  </resource>
+				<node_path> "" </node_path>
+				<vector2> 432.133, 152.306 </vector2>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -573.116, -65.9552 </vector2>
+							<string> "snap_grid" </string>
+							<bool> False </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.999998 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 3 </int>
+							<string> "sources" </string>
+							<array  len="5" shared="false">
+								<string> "res://scripts/prechain.gd" </string>
+								<string> "res://scripts/chain.gd" </string>
+								<string> "res://scripts/rownianew.gd" </string>
+								<string> "res://scripts/chainBall.gd" </string>
+								<string> "res://scripts/box.gd" </string>
+							</array>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
+				<real> -321 </real>
+				<real> 162 </real>
+				<real> 390 </real>
+				<real> 711 </real>
+				<string> "[b]Wahadło fizyczne[/b]&#000a;&#000a;[img]res://wiki/WahM.png[/img]&#000a;&#000a;Wahadło fizyczne to punkt masa poruszający się po okręgu w płaszczyźnie pionowej w jednorodnym polu grawitacyjnym.&#000a;Równanie ruchu wahadła określa wzór:&#000a;&#000a;[img]res://wiki/5c5587d4aa1191ff7d0dbcd59f327f44.png[/img]&#000a;&#000a;gdzie:&#000a;&#000a; - [img]res://wiki/c9cf297b564a4826c1c4bbcb86bcba3c.png[/img] – kąt odchylenia wahadła od pionu,&#000a;&#000a; - [i]g[/i] – przyspieszenie ziemskie,&#000a; &#000a; - [i]m[/i] - masa wahadła&#000a;&#000a; - [i]a[/i] – długość nici." </string>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  resource_type="PackedScene" path="res://xmls/ui/springImg.xml">  </resource>
+				<vector2> 371.72, 142.884 </vector2>
+				<vector2> 0.709833, 0.927185 </vector2>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -206.488, 5.00376 </vector2>
+							<string> "snap_grid" </string>
+							<bool> False </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.902498 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 1 </int>
+							<string> "sources" </string>
+							<array  len="6" shared="false">
+								<string> "res://scripts/prechain.gd" </string>
+								<string> "res://scripts/prespring.gd" </string>
+								<string> "res://scripts/dockEM.gd" </string>
+								<string> "res://scripts/rownianew.gd" </string>
+								<string> "res://scripts/box.gd" </string>
+								<string> "res://scripts/dwig.gd" </string>
+							</array>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
+				<real> -362 </real>
+				<real> 117 </real>
+				<real> 317 </real>
+				<real> 735 </real>
+				<string> "[b]Masa na sprężynie[/b]&#000a;&#000a;[img]res://wiki/Rys1.png[/img] &#000a;&#000a;Jest to ciało zawieszone na sprężynie, które może wykonywać drgania swobodne pod wpływem działającej na ciało sprężyny.&#000a;&#000a;Jeżeli siła sprężystości sprężyny jest proporcjonalna do wychylenia ciała z położenia równowagi, to drgania są drganiami harmonicznymi prostymi.&#000a;Warunek ten jest dobrze spełniony, jeżeli sprężyna nie zostanie rozciągnięta zbyt mocno (naprężenia w sprężynie są poniżej granicy plastyczności).&#000a;Dla takich drgań ich okres jest niezależny od ciężaru ciała (jest niezmienny np. na różnych planetach), natomiast zależy od masy m ciała i współczynnika sprężystości sprężyny [i]k[/i].&#000a;&#000a;Okres tych drgań wyraża wzór:&#000a;&#000a;[img]res://wiki/000ec11dd02aed66d342025bc953f5cb.png[/img]&#000a;&#000a;gdzie:&#000a;&#000a; - [i]T[/i] okres drgań wahadła sprężynowego.&#000a;&#000a;Z powyższego wzoru wynika, że im większa masa zawieszona jest na sprężynie i mniejszy współczynnik sprężystości (np. zastosowano miękką sprężynę), tym okres drgań jest większy." </string>
+				<int> 1 </int>
+				<int> 3 </int>
+				<int> 4 </int>
+			</array>
+			<string> "version" </string>
+			<int> 1 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

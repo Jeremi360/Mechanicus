@@ -1,0 +1,350 @@
+[gd_scene load_steps=15 format=1]
+
+[ext_resource path="res://scripts/MechList.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/Box.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/boxBALLicon.png" type="Texture" id=3]
+[ext_resource path="res://sprites/ui/rownia3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/dwigIcon.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/chain.png" type="Texture" id=6]
+[ext_resource path="res://sprites/mechs/ropeV.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ui/hud_x.png" type="Texture" id=8]
+[ext_resource path="res://fonts/ubunu64.fnt" type="Font" id=9]
+[ext_resource path="res://fonts/ubunt32I.fnt" type="Font" id=10]
+[ext_resource path="res://fonts/ubunt32.fnt" type="Font" id=11]
+[ext_resource path="res://sprites/mechs/rownia3.png" type="Texture" id=12]
+[ext_resource path="res://xmls/ui/chainImg.xml" type="PackedScene" id=13]
+[ext_resource path="res://xmls/ui/springImg.xml" type="PackedScene" id=14]
+
+[node name="MechList" type="Node2D"]
+
+process/pause_mode = 2
+transform/pos = Vector2( 438.066, 78.3584 )
+transform/scale = Vector2( 1, 0.56018 )
+z/z = 5
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+debug = false
+move = true
+
+[node name="SpriteBg1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 86.85, 517.029 )
+transform/scale = Vector2( 1.27935, 1.58455 )
+z/z = -1
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="Control" type="Control" parent="."]
+
+margin/left = 71.0
+margin/top = 27.0
+margin/right = 111.0
+margin/bottom = 67.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="GoToPage1" type="Button" parent="Control"]
+
+margin/left = -406.0
+margin/top = -56.0
+margin/right = -140.0
+margin/bottom = 80.0
+hint/tooltip = "Szescian"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 3 )
+flat = false
+
+[node name="GoToPage2" type="Button" parent="Control"]
+
+margin/left = -128.0
+margin/top = -54.0
+margin/right = -4.0
+margin/bottom = 83.0
+hint/tooltip = "Rownia Pochyla"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = false
+
+[node name="GoToPage3" type="Button" parent="Control"]
+
+margin/left = 2.0
+margin/top = -54.0
+margin/right = 118.0
+margin/bottom = 84.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 5 )
+flat = false
+
+[node name="GoToPage4" type="Button" parent="Control"]
+
+margin/left = 125.0
+margin/top = -52.0
+margin/right = 217.0
+margin/bottom = 82.0
+hint/tooltip = "Wachadłlo"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 6 )
+flat = false
+
+[node name="GoToPage5" type="Button" parent="Control"]
+
+margin/left = 223.0
+margin/top = -56.0
+margin/right = 309.0
+margin/bottom = 85.0
+hint/tooltip = "Sprezyna z Obciaznikiem"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 7 )
+flat = false
+
+[node name="Exit" type="Button" parent="Control"]
+
+margin/left = 318.0
+margin/top = -53.0
+margin/right = 404.0
+margin/bottom = 80.0
+hint/tooltip = "Zamknij"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 8 )
+flat = false
+
+[node name="Nextb" type="Button" parent="Control"]
+
+margin/left = -410.0
+margin/top = 726.0
+margin/right = 214.0
+margin/bottom = 859.0
+hint/tooltip = "Dalej"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 9 )
+toggle_mode = false
+text = "Kolejna maszyna"
+flat = false
+
+[node name="Prevb" type="Button" parent="Control"]
+
+margin/left = -335.0
+margin/top = 880.0
+margin/right = 365.0
+margin/bottom = 1013.0
+hint/tooltip = "Dalej"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 9 )
+toggle_mode = false
+text = "Poprzednia maszyna"
+flat = false
+
+[node name="Page1" type="Control" parent="."]
+
+margin/right = 40.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="RichTextLabel" parent="Page1"]
+
+margin/left = -277.0
+margin/top = 121.0
+margin/right = 460.0
+margin/bottom = 739.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/bold_italics_font = ExtResource( 10 )
+custom_fonts/italics_font = ExtResource( 10 )
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode/enabled = true
+bbcode/bbcode = "[b]Dynamika bryły sztywnej[/b]\n\n[img]res://sprites/mechs/box.png[/img] [img]res://sprites/mechs/ballboxs.png[/img]\n\n[b]Spis treści[/b]\n\n - [url=#Wst.C4.99p]1 Wstęp[/url]\n - [url=#Momenty_bezw.C5.82adno.C5.9Bci_wybranych_cia.C5.82]2 Momenty bezwładności wybranych ciał[/url]\n - [url=#Twierdzenie_Steinera]3 Twierdzenie Steinera[/url]\n - [url=#Cechy_momentu_si.C5.82y]4 Cechy momentu siły[/url]\n - [url=#Praktyka]5 Praktyka[/url]\n - [url=#Moment_p.C4.99du]6 Moment pędu[/url]\n - [url=#Zasady_dynamiki_ruchu_obrotowego]7 Zasady dynamiki ruchu obrotowego[/url]\n - [url=#Zasada_zachowania_momentu_p.C4.99du]8 Zasada zachowania momentu pędu[/url]\n - [url=#Energia_kinetyczna_ruchu_obrotowego]9 Energia kinetyczna ruchu obrotowego[/url]\n - [url=#Energia_kinetyczna_tocz.C4.85cego_si.C4.99_cia.C5.82a]10 Energia kinetyczna toczącego się ciała[/url]\n\n[b]Wstęp[/b]\n\nAby ciało zaczęło się obracać należy podziałać na nie siłą. Efekt działania siły zależy m.in od rozłożenia masy względem osi obrotu bryły.\n\n[b]moment bezwładności[/b] - wielkość charakteryzująca rozłożenie masy danego ciała względem jego osi obrotu.\n\nGdy podzielimy ciało na n nieskończenie małych fragmentów, wzór ma postać:[img]res://wiki/102ed9cf3cd558286015bd15fa64ecbc.png[/img]\n\nGdzie m - masa fragmentu, zaś r - jego odległość od osi obrotu.\n[b]Momenty bezwładności wybranych ciał[/b]\n\n - pręt - gdy oś obrotu jest osią symetrii pręta:[img]res://wiki/a11455bf0de0816f039ac483f22e2ac6.png[/img]- gdy oś obrotu jest prostopadła i przechodzi przez koniec pręta:[img]res://wiki/73d121d4a361329de258057e13ddcaa8.png[/img]\n - rura cienkościenna[img]res://wiki/2302b0cd27751b7b1a7d0ed6b10661b3.png[/img]\n - rura grubościenna[img]res://wiki/b500dbb44d3865ffab7eaeaae5c2bb3a.png[/img]\n - walec/krążek[img]res://wiki/631caf76245eb68ad07a907918b20901.png[/img]\n - kula[img]res://wiki/cfdc52dc15853bdfb69071d4d2193b9f.png[/img]\n \n[b]Twierdzenie Steinera[/b]\n\nJeżeli bryła sztywna o znanym momencie bezwładności obraca się względem innej osi niż oś przechodząca przez środek ciężkości to wtedy jej moment bezwładności określa związek:[img]res://wiki/98f42f2cf6dbb2183710e734ccd8e73a.png[/img]\n\nd - odległość rzeczywistej osi obrotu od osi przechodzącej przez środek ciężkości\n\nNa ruch obrotowy bryły sztywnej ma wpływ siła wprawiająca w ruch bryłę i jej odległość od osi obrotu.\n\nWielkością od której zależy ruch obrotowy bryły sztywnej jest [b]moment siły[/b].\n\nMoment siły jest wektorem.\n\n[b]Cechy momentu siły[/b]\n\nMoment siły jest wynikiem mnożenia wektorowego wektora wodzącego i wektora siły[img]res://wiki/09d1591f7a5f2fb5d0010aa034ff78f0.png[/img]\n - wartość[img]res://wiki/c9f75c1085ff06568d9e1608cd0d2248.png[/img]\n - kierunek\n\nJest prostopadły do płaszczyzny utworzonej przez wektor wodzący i wektor siły\n - zwrot\n\nJest określony regułą śruby prawoskrętnej.\n\n[b]Praktyka[/b]\n\nWartość momentu siły jest iloczynem siły i odległości jej wektora od osi obrotu:\n\n[img]res://wiki/7b259f3874e7dc6e5d84c7e1abe21842.png[/img]\n[b]Moment pędu[/b]\n\n - wartość\n\nIloczyn momentu bezwładności i prędkości kątowej:\n\n[img]res://wiki/d4d1b328f865c502470c90753abe5bd1.png[/img]\n - kierunek\n\nProstopadły do płaszczyzny obrotu bryły.\n - zwrot\n\nZgodny z regułą śruby prawoskrętnej.\n[b]Zasady dynamiki ruchu obrotowego[/b]\n\nJeżeli wypadkowy moment sił działających na ciało jest równy 0 to bryła pozostaje w spoczynku lub obraca się ze stałą prędkością kątową.\n\nPrzyspieszenie kątowe zależy wprost proporcjonalnie od wypadkowego momentu sił i odwrotnie proporcjonalnie od momentu bezwładności bryły:\n\n[img]res://wiki/6ecf49e78246b25a34eb1e6ff370fc83.png[/img]\n\n[img]res://wiki/b580260eb666a5e30d22d9d581fc4073.png[/img]\n\n[img]res://wiki/cb032644f1ba8a6610086d52b3f8c2d5.png[/img]\n\n[img]res://wiki/d3f509c2fd6d2b3502fd16c939c87f3e.png[/img]\n\n[b]Zasada zachowania momentu pędu[/b]\n\nMoment pędu układu, na który nie działają momenty sił zewnętrznych, lub działające momenty sił równoważą się, pozostaje stały.\n\n[b]Energia kinetyczna ruchu obrotowego[/b]\n\n[img]res://wiki/9561809331bed818dca578b8d98665cd.png[/img]\n\nI - moment bezwładności\n\n[img]res://wiki/4d1b7b74aba3cfabd624e898d86b4602.png[/img] - prędkość kątowa\n\nEnergie kinetyczne ruchu obrotowego wybranych ciał (bez poślizgu).\n - walec [img]res://wiki/9cd743a9490293e9e5b18f5c0a63412c.png[/img]\n - kula [img]res://wiki/bcb6f8ba015d28b05b9fb51def43cf1c.png[/img]\n \n[b]Energia kinetyczna toczącego się ciała[/b]\n\nEnergia kinetyczna jest sumą energii kinetycznej ruchu postępowego i obrotowego:\n\n[img]res://wiki/4d4a1ff0d902ddca2c85c5a9d12d575c.png[/img]\n\n - dla kuli\n\n[img]res://wiki/51c62667b50036b74f4a3582894fd21c.png[/img]\n - dla walca\n\n[img]res://wiki/df568b80a6ec67a246d3b2219e3e8943.png[/img]\n\n\n"
+visible_characters = -1
+
+[node name="Page2" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 9.0
+margin/right = 49.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Sprite" type="Sprite" parent="Page2"]
+
+transform/pos = Vector2( 466.116, 293.884 )
+transform/scale = Vector2( 1.09633, 1.29359 )
+z/z = -1
+texture = ExtResource( 12 )
+
+[node name="Label" type="RichTextLabel" parent="Page2"]
+
+margin/left = -370.0
+margin/top = 118.0
+margin/right = 381.0
+margin/bottom = 720.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/bold_italics_font = ExtResource( 11 )
+custom_fonts/italics_font = ExtResource( 10 )
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode/enabled = true
+bbcode/bbcode = "[b]Równia z tarciem[/b]\n\n[img]res://wiki/250px-Rownia_tarcie.svg.png[/img]\n\nRozkład sił na równi z uwzględnieniem siły tarcia\n\nJeżeli ciało spoczywa, siła tarcia statycznego równoważy siłę wypadkową działającą na to ciało.\nSiła tarcia statycznego może przyjąć tylko wartości mniejsze od wynikających z prawa tarcia.\nSiła tarcia jest kolejną siłą, którą trzeba uwzględnić przy wyznaczaniu siły wypadkowej.\nWarunek na spoczynek ciała na równi określa wzór:\n\n[img]res://wiki/aff116649395edcf34ff75d1288e8afd.png[/img]\n\ngdzie:[i]μs[/i] - współczynnik.\n\nDla ciała poruszającego się w dół równi przyspieszenie określone jest wzorem:\n\n[img]res://wiki/edd9955ed98fc69d653189b1d31b5afc.png[/img],\n\ndodatnia wartość wskazuje przyspieszenie w dół równi, czyli ruch przyspieszony,\nujemna - przyspieszenie w górę równi, czyli ruch opóźniony.\n\nDla poruszającego się w górę równi:\n\n[img]res://wiki/feb1dc0f39a1759fedbe60c20f163864.png[/img],\n\nprzyspieszenie jest skierowane w dół równi, co oznacza, że ruch jest zawsze opóźniony."
+visible_characters = -1
+
+[node name="Page3" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 9.0
+margin/right = 49.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="RichTextLabel" parent="Page3"]
+
+margin/left = -375.0
+margin/top = 142.0
+margin/right = 429.0
+margin/bottom = 750.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/bold_italics_font = ExtResource( 10 )
+custom_fonts/italics_font = ExtResource( 10 )
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode/enabled = true
+bbcode/bbcode = "[b]Dźwignia dwustronna[/b]\n\n\n[img]res://wiki/300px-FirstClassLever.svg.png[/img] [img]res://sprites/ui/dwig05m.png[/img]\n\nW dźwigni dwustronnej (dwuramiennej) siły działają po przeciwnych stronach osi obrotu rys1.\n\nOdległość od miejsca przyłożenia siły do osi nazywa się ramieniem dźwigni.\nDźwignia pozostaje w równowadze, gdy wypadkowy moment sił przyłożonych do niej wynosi 0.\nDla sytuacji z rys.1 można zapisać to równaniem:\n\n[img]res://wiki/489f2d296c97e2d2b101fcb2a2f0f69a.png[/img]\n\ngdzie:\n\n - [img]res://wiki/524461e2368b7889b800e6bb1be031bf.png[/img] – działające siły,\n\n - [img]res://wiki/7f12441d9715349ca9dfc6bbe07bf84b.png[/img] – ich ramiona.\n\n[b]Przekładnia dźwigni[/b]\n\nPonieważ ramiona dźwigni są również ramionami odpowiednich sił (są do nich prostopadłe) można równanie dźwigni zapisać niewektorowo\n\n[img]res://wiki/18655a4c46317f9f1cef9517aefceaff.png[/img]\n\nskąd wynika wzór na tzw. [i]przekładnię dźwigni[/i]:\n\n[img]res://wiki/00e1d525e121db7d92c013d4ffdd67c4.png[/img]\n\nZe wzoru tego wynika, że siła przyłożona do dźwigni jest odwrotnie proporcjonalna do długości jej ramienia.\nPrzekładnia dźwigni, czyli stosunek długości ramion dźwigni, informuje o tym, jaki jest zysk siły, \nczyli ile razy większą siłę [i]F[/i]2 można uzyskać działając siłą [i]F[/i]1.\n"
+visible_characters = -1
+
+[node name="Page4" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 9.0
+margin/right = 49.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Chain" parent="Page4" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 432.133, 152.306 )
+
+[node name="Label" type="RichTextLabel" parent="Page4"]
+
+margin/left = -321.0
+margin/top = 162.0
+margin/right = 390.0
+margin/bottom = 711.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/bold_italics_font = ExtResource( 11 )
+custom_fonts/italics_font = ExtResource( 10 )
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode/enabled = true
+bbcode/bbcode = "[b]Wahadło fizyczne[/b]\n\n[img]res://wiki/WahM.png[/img]\n\nWahadło fizyczne to punkt masa poruszający się po okręgu w płaszczyźnie pionowej w jednorodnym polu grawitacyjnym.\nRównanie ruchu wahadła określa wzór:\n\n[img]res://wiki/5c5587d4aa1191ff7d0dbcd59f327f44.png[/img]\n\ngdzie:\n\n - [img]res://wiki/c9cf297b564a4826c1c4bbcb86bcba3c.png[/img] – kąt odchylenia wahadła od pionu,\n\n - [i]g[/i] – przyspieszenie ziemskie,\n \n - [i]m[/i] - masa wahadła\n\n - [i]a[/i] – długość nici."
+visible_characters = -1
+
+[node name="Page5" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 9.0
+margin/right = 49.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Spring" parent="Page5" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 371.72, 142.884 )
+transform/scale = Vector2( 0.709833, 0.927185 )
+
+[node name="Label" type="RichTextLabel" parent="Page5"]
+
+margin/left = -362.0
+margin/top = 117.0
+margin/right = 317.0
+margin/bottom = 735.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/bold_italics_font = ExtResource( 10 )
+custom_fonts/italics_font = ExtResource( 10 )
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 11 )
+bbcode/enabled = true
+bbcode/bbcode = "[b]Masa na sprężynie[/b]\n\n[img]res://wiki/Rys1.png[/img] \n\nJest to ciało zawieszone na sprężynie, które może wykonywać drgania swobodne pod wpływem działającej na ciało sprężyny.\n\nJeżeli siła sprężystości sprężyny jest proporcjonalna do wychylenia ciała z położenia równowagi, to drgania są drganiami harmonicznymi prostymi.\nWarunek ten jest dobrze spełniony, jeżeli sprężyna nie zostanie rozciągnięta zbyt mocno (naprężenia w sprężynie są poniżej granicy plastyczności).\nDla takich drgań ich okres jest niezależny od ciężaru ciała (jest niezmienny np. na różnych planetach), natomiast zależy od masy m ciała i współczynnika sprężystości sprężyny [i]k[/i].\n\nOkres tych drgań wyraża wzór:\n\n[img]res://wiki/000ec11dd02aed66d342025bc953f5cb.png[/img]\n\ngdzie:\n\n - [i]T[/i] okres drgań wahadła sprężynowego.\n\nZ powyższego wzoru wynika, że im większa masa zawieszona jest na sprężynie i mniejszy współczynnik sprężystości (np. zastosowano miękką sprężynę), tym okres drgań jest większy."
+visible_characters = -1
+
+[connection signal="pressed" from="Control/GoToPage1" to="." method="_go_to_page" binds= [ 1 ]]
+
+[connection signal="pressed" from="Control/GoToPage2" to="." method="_go_to_page" binds= [ 2 ]]
+
+[connection signal="pressed" from="Control/GoToPage3" to="." method="_go_to_page" binds= [ 3 ]]
+
+[connection signal="pressed" from="Control/GoToPage4" to="." method="_go_to_page" binds= [ 4 ]]
+
+[connection signal="pressed" from="Control/GoToPage5" to="." method="_go_to_page" binds= [ 5 ]]
+
+[connection signal="pressed" from="Control/Exit" to="." method="_on_Exit_pressed"]
+
+[connection signal="pressed" from="Control/Nextb" to="." method="_on_Nextb_pressed"]
+
+[connection signal="pressed" from="Control/Prevb" to="." method="_on_Prevb_pressed"]
+
+

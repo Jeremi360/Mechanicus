@@ -1,0 +1,550 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://sprites/ui/BoxSmall.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Help.gd" type="Script" id=2]
+[ext_resource path="res://fonts/ubunt32.fnt" type="Font" id=3]
+[ext_resource path="res://sprites/ui/hud_x35.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/right_arrow.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/space.png" type="Texture" id=6]
+[ext_resource path="res://fonts/ubuntu16.fnt" type="Font" id=7]
+[ext_resource path="res://sprites/ui/hud_gem_green.png" type="Texture" id=8]
+[ext_resource path="res://sprites/ui/hud_gem_blue.png" type="Texture" id=9]
+[ext_resource path="res://sprites/ui/esc.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 1 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="HelpDialog" type="PopupPanel"]
+
+visibility/self_opacity = 0.7
+margin/left = 63.0
+margin/top = 358.0
+margin/right = 670.0
+margin/bottom = 553.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_styles/panel = SubResource( 1 )
+popup/exclusive = false
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+move = true
+
+[node name="Nextb" type="Button" parent="."]
+
+margin/left = 498.0
+margin/top = 146.0
+margin/right = 609.0
+margin/bottom = 184.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+text = "Dalej"
+flat = false
+
+[node name="Prevb" type="Button" parent="."]
+
+margin/left = 20.0
+margin/top = 148.0
+margin/right = 150.0
+margin/bottom = 186.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+text = "Wstecz"
+flat = false
+
+[node name="Xb" type="Button" parent="."]
+
+margin/left = 567.0
+margin/top = 2.0
+margin/right = 612.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = false
+
+[node name="Page1" type="Control" parent="."]
+
+margin/left = 96.0
+margin/top = 46.0
+margin/right = 136.0
+margin/bottom = 86.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page1"]
+
+margin/left = 20.0
+margin/top = 18.0
+margin/right = 468.0
+margin/bottom = 139.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Aby poruszyć postacią gracza wciśnij"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page1"]
+
+transform/pos = Vector2( 140.461, 64.27 )
+texture = ExtResource( 5 )
+
+[node name="Sprite1" type="Sprite" parent="Page1"]
+
+transform/pos = Vector2( 222.647, 62.6163 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="Label1" type="Label" parent="Page1"]
+
+margin/left = 160.0
+margin/top = 49.0
+margin/right = 225.0
+margin/bottom = 76.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "lub"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="Page1"]
+
+margin/left = 241.0
+margin/top = 50.0
+margin/right = 269.0
+margin/bottom = 75.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Page2" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 92.0
+margin/top = 42.0
+margin/right = 132.0
+margin/bottom = 82.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page2"]
+
+margin/left = 20.0
+margin/top = 18.0
+margin/right = 468.0
+margin/bottom = 139.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Aby skoczyć postacią gracza wciśnij"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page2"]
+
+transform/pos = Vector2( 180.152, 65.0536 )
+texture = ExtResource( 6 )
+
+[node name="Label3" type="Label" parent="Page2"]
+
+margin/left = 236.0
+margin/top = 50.0
+margin/right = 264.0
+margin/bottom = 75.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Page3" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 75.0
+margin/top = -4.0
+margin/right = 115.0
+margin/bottom = 36.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page3"]
+
+margin/left = -33.0
+margin/top = 18.0
+margin/right = 515.0
+margin/bottom = 143.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Korzystając z menu znajdujacego sie nad postacią gracza możesz umieszczać na planszy wybrane maszyny proste."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="Page3"]
+
+margin/left = 80.0
+margin/top = 153.0
+margin/right = 418.0
+margin/bottom = 184.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 7 )
+toggle_mode = false
+text = "Lista Dostępnych Maszyn"
+flat = false
+
+[node name="Page4" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 66.0
+margin/top = 32.0
+margin/right = 106.0
+margin/bottom = 72.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page4"]
+
+margin/left = -47.0
+margin/top = 16.0
+margin/right = 104.0
+margin/bottom = 49.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Klikając w"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page4"]
+
+transform/pos = Vector2( 123.904, 25.6597 )
+texture = ExtResource( 8 )
+
+[node name="Label4" type="Label" parent="Page4"]
+
+margin/left = 152.0
+margin/top = 16.0
+margin/right = 543.0
+margin/bottom = 51.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "na obiekcie przejdziesz do"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label3" type="Label" parent="Page4"]
+
+margin/left = -47.0
+margin/top = 50.0
+margin/right = 535.0
+margin/bottom = 105.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "trybu edycji jego wlasciwosci fizycznych."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Page5" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 62.0
+margin/top = 2.0
+margin/right = 102.0
+margin/bottom = 42.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page5"]
+
+margin/left = -23.0
+margin/top = 36.0
+margin/right = 512.0
+margin/bottom = 107.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "W trybie edycji właściwości fizyczny możesz przesuwać obiekt korzystając ze strzałek."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page5"]
+
+transform/pos = Vector2( 328.937, 112.399 )
+texture = ExtResource( 5 )
+
+[node name="Sprite1" type="Sprite" parent="Page5"]
+
+transform/pos = Vector2( 357.934, 112.002 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="Page5"]
+
+transform/pos = Vector2( 386.931, 111.207 )
+transform/rot = 90.0
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="Page5"]
+
+transform/pos = Vector2( 416.931, 111.207 )
+transform/rot = 90.0
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="Page6" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 62.0
+margin/top = 1.0
+margin/right = 102.0
+margin/bottom = 41.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page6"]
+
+margin/left = -49.0
+margin/top = 46.0
+margin/right = 124.0
+margin/bottom = 77.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Klikając w"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page6"]
+
+transform/pos = Vector2( 124.904, 55.6597 )
+texture = ExtResource( 9 )
+
+[node name="Label4" type="Label" parent="Page6"]
+
+margin/left = 157.0
+margin/top = 46.0
+margin/right = 548.0
+margin/bottom = 81.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "na obiekcie przejdziesz"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label3" type="Label" parent="Page6"]
+
+margin/left = -47.0
+margin/top = 80.0
+margin/right = 535.0
+margin/bottom = 135.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "do trybu śledzenia zmiennych w czasie własciwości fizycznych."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Page7" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 58.0
+margin/top = 23.0
+margin/right = 98.0
+margin/bottom = 63.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page7"]
+
+margin/left = -32.0
+margin/top = 44.0
+margin/right = 430.0
+margin/bottom = 172.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Klikajac w"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page7"]
+
+transform/pos = Vector2( 133.305, 53.6597 )
+texture = ExtResource( 4 )
+
+[node name="Label4" type="Label" parent="Page7"]
+
+margin/left = 156.0
+margin/top = 44.0
+margin/right = 576.0
+margin/bottom = 112.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "na obiekcie a usuniesz go."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Page8" type="Control" parent="."]
+
+visibility/visible = false
+margin/left = 128.0
+margin/top = 57.0
+margin/right = 168.0
+margin/bottom = 97.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Label" type="Label" parent="Page8"]
+
+margin/left = -32.0
+margin/top = 14.0
+margin/right = 430.0
+margin/bottom = 142.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Wciśnij"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Page8"]
+
+transform/pos = Vector2( 108.095, 23.6597 )
+texture = ExtResource( 10 )
+
+[node name="Label4" type="Label" parent="Page8"]
+
+margin/left = 151.0
+margin/top = 12.0
+margin/right = 542.0
+margin/bottom = 47.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "a włączysz pauzę."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="Nextb" to="." method="_on_Nextb_pressed"]
+
+[connection signal="pressed" from="Prevb" to="." method="_on_Prevb_pressed"]
+
+[connection signal="pressed" from="Xb" to="." method="_on_Xb_pressed"]
+
+[connection signal="pressed" from="Page3/Button" to="." method="_on_list"]
+
+

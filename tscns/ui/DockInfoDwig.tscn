@@ -1,0 +1,320 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/DockInfoDwig.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/Box.png" type="Texture" id=2]
+[ext_resource path="res://fonts/ubunt32.fnt" type="Font" id=3]
+[ext_resource path="res://sprites/ui/hud_x35.png" type="Texture" id=4]
+
+[node name="InfoBox" type="Node2D"]
+
+visibility/opacity = 0.7
+transform/pos = Vector2( -17.2577, -16.6993 )
+transform/scale = Vector2( 0.460697, 0.478146 )
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+
+[node name="Box" type="Sprite" parent="."]
+
+transform/pos = Vector2( 63.0826, 18.7541 )
+transform/scale = Vector2( 0.877833, 0.784377 )
+texture = ExtResource( 2 )
+
+[node name="Node2PosMain" type="Node2D" parent="."]
+
+transform/pos = Vector2( -104.026, -242.781 )
+z/z = 2
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="LabelT" type="Label" parent="Node2PosMain"]
+
+margin/left = 3.0
+margin/right = 174.0
+margin/bottom = 30.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Położenie Środka:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW" type="Label" parent="Node2PosMain"]
+
+margin/left = 31.0
+margin/top = 33.0
+margin/right = 240.0
+margin/bottom = 63.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "X:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW1" type="Label" parent="Node2PosMain"]
+
+margin/left = 31.0
+margin/top = 75.0
+margin/right = 240.0
+margin/bottom = 105.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Y:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LinEX" type="LineEdit" parent="Node2PosMain"]
+
+margin/left = 75.0
+margin/top = 75.0
+margin/right = 313.0
+margin/bottom = 115.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="LinEY" type="LineEdit" parent="Node2PosMain"]
+
+margin/left = 75.0
+margin/top = 32.0
+margin/right = 284.0
+margin/bottom = 62.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="Node2PosStart" type="Node2D" parent="."]
+
+transform/pos = Vector2( -263.881, -103.786 )
+z/z = 2
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="LabelT" type="Label" parent="Node2PosStart"]
+
+margin/left = 23.0
+margin/right = 688.0
+margin/bottom = 30.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Położenie Końca Lewego Ramienia:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW" type="Label" parent="Node2PosStart"]
+
+margin/left = 187.0
+margin/top = 37.0
+margin/right = 396.0
+margin/bottom = 67.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "X:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW1" type="Label" parent="Node2PosStart"]
+
+margin/left = 187.0
+margin/top = 79.0
+margin/right = 396.0
+margin/bottom = 109.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Y:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LinEX" type="LineEdit" parent="Node2PosStart"]
+
+margin/left = 231.0
+margin/top = 79.0
+margin/right = 469.0
+margin/bottom = 119.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="LinEY" type="LineEdit" parent="Node2PosStart"]
+
+margin/left = 231.0
+margin/top = 36.0
+margin/right = 469.0
+margin/bottom = 76.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="Node2PosEnd" type="Node2D" parent="."]
+
+transform/pos = Vector2( -262.581, 47.7305 )
+z/z = 2
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="LabelT" type="Label" parent="Node2PosEnd"]
+
+margin/left = 3.0
+margin/right = 174.0
+margin/bottom = 30.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Położenie Końca Prawego Ramienia:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW" type="Label" parent="Node2PosEnd"]
+
+margin/left = 187.0
+margin/top = 37.0
+margin/right = 396.0
+margin/bottom = 67.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "X:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelTW1" type="Label" parent="Node2PosEnd"]
+
+margin/left = 187.0
+margin/top = 79.0
+margin/right = 396.0
+margin/bottom = 109.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Y:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LinEX" type="LineEdit" parent="Node2PosEnd"]
+
+margin/left = 231.0
+margin/top = 79.0
+margin/right = 469.0
+margin/bottom = 119.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="LinEY" type="LineEdit" parent="Node2PosEnd"]
+
+margin/left = 231.0
+margin/top = 36.0
+margin/right = 469.0
+margin/bottom = 76.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="Node2Alfa" type="Node2D" parent="."]
+
+transform/pos = Vector2( -176.806, 184.485 )
+z/z = 2
+__meta__ = { "_edit_group_":true, "_editor_collapsed":true }
+
+[node name="LabelT" type="Label" parent="Node2Alfa"]
+
+margin/left = 3.0
+margin/right = 554.0
+margin/bottom = 30.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Obrót Dziwigni w Stopniach:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LinE" type="LineEdit" parent="Node2Alfa"]
+
+margin/left = 141.0
+margin/top = 35.0
+margin/right = 379.0
+margin/bottom = 75.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+max_length = 0
+editable = true
+secret = false
+
+[node name="Button" type="Button" parent="."]
+
+margin/left = 296.0
+margin/top = -259.0
+margin/right = 347.0
+margin/bottom = -213.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = false
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+

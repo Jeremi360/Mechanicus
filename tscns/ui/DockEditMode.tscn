@@ -1,0 +1,444 @@
+[gd_scene load_steps=11 format=1]
+
+[ext_resource path="res://scripts/dockEM.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/Box.png" type="Texture" id=2]
+[ext_resource path="res://scripts/rotset2.gd" type="Script" id=3]
+[ext_resource path="res://fonts/ubunu64.fnt" type="Font" id=4]
+[ext_resource path="res://sprites/ui/roate.png" type="Texture" id=5]
+[ext_resource path="res://scripts/frisetFXZ.gd" type="Script" id=6]
+[ext_resource path="res://sprites/ui/friction.png" type="Texture" id=7]
+[ext_resource path="res://scripts/massset.gd" type="Script" id=8]
+[ext_resource path="res://sprites/ui/Mass.png" type="Texture" id=9]
+[ext_resource path="res://sprites/ui/BoxSmall.png" type="Texture" id=10]
+
+[node name="DockEditMode" type="Node2D"]
+
+transform/pos = Vector2( 336.427, 194.624 )
+transform/scale = Vector2( 0.383398, 0.320817 )
+z/z = 5
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/opacity = 0.7
+transform/pos = Vector2( 325.946, 48.2867 )
+transform/scale = Vector2( 1.69465, 1.53083 )
+texture = ExtResource( 2 )
+
+[node name="RotSet" type="Node2D" parent="."]
+
+transform/pos = Vector2( 115.061, -10.3069 )
+z/z = 5
+script/script = ExtResource( 3 )
+
+[node name="Button+15" type="Button" parent="RotSet"]
+
+margin/left = 548.0
+margin/top = 4.0
+margin/right = 716.0
+margin/bottom = 77.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "+ 15"
+flat = false
+
+[node name="Button-15" type="Button" parent="RotSet"]
+
+margin/left = -124.0
+margin/top = 94.0
+margin/right = 44.0
+margin/bottom = 167.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "- 15"
+flat = false
+
+[node name="Button+45" type="Button" parent="RotSet"]
+
+margin/left = 548.0
+margin/top = 94.0
+margin/right = 716.0
+margin/bottom = 167.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "+ 45"
+flat = false
+
+[node name="Button-45" type="Button" parent="RotSet"]
+
+margin/left = -124.0
+margin/top = 4.0
+margin/right = 44.0
+margin/bottom = 77.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "- 45"
+flat = false
+
+[node name="HSlider" type="HSlider" parent="RotSet"]
+
+margin/left = -325.0
+margin/top = 202.0
+margin/right = 710.0
+margin/bottom = 218.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+range/min = 0.0
+range/max = 360.0
+range/step = 1.0
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 360
+ticks_on_borders = true
+
+[node name="Sprite" type="Sprite" parent="RotSet"]
+
+transform/pos = Vector2( -272.229, 71.3935 )
+transform/scale = Vector2( 0.994548, 1.13664 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="RotSet"]
+
+margin/left = -348.0
+margin/top = -86.0
+margin/right = -44.0
+margin/bottom = -25.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "Obrót:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label0" type="Label" parent="RotSet"]
+
+margin/left = -375.0
+margin/top = 184.0
+margin/right = -261.0
+margin/bottom = 245.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label360" type="Label" parent="RotSet"]
+
+margin/left = 714.0
+margin/top = 184.0
+margin/right = 904.0
+margin/bottom = 274.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "360"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LineEdit" type="LineEdit" parent="RotSet"]
+
+margin/left = 61.0
+margin/top = 48.0
+margin/right = 527.0
+margin/bottom = 119.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+max_length = 0
+editable = false
+secret = false
+
+[node name="FriSet" type="Node2D" parent="."]
+
+transform/pos = Vector2( -29.1558, 336.031 )
+z/z = 5
+script/script = ExtResource( 6 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Button+25" type="Button" parent="FriSet"]
+
+margin/left = 782.0
+margin/top = -5.0
+margin/right = 950.0
+margin/bottom = 68.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "+ 25"
+flat = false
+
+[node name="Button-25" type="Button" parent="FriSet"]
+
+margin/left = 104.0
+margin/top = -8.0
+margin/right = 272.0
+margin/bottom = 65.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "- 25"
+flat = false
+
+[node name="HSlider" type="HSlider" parent="FriSet"]
+
+margin/left = -85.0
+margin/top = 102.0
+margin/right = 765.0
+margin/bottom = 118.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 100.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 100
+ticks_on_borders = true
+
+[node name="Sprite" type="Sprite" parent="FriSet"]
+
+transform/pos = Vector2( -104.771, 21.821 )
+transform/scale = Vector2( 0.327336, 0.305164 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="FriSet"]
+
+margin/left = -231.0
+margin/top = -86.0
+margin/right = -79.0
+margin/bottom = -25.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "Współczynnik tarcia:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LineEdit" type="LineEdit" parent="FriSet"]
+
+margin/left = 289.0
+margin/top = -3.0
+margin/right = 755.0
+margin/bottom = 68.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+text = "100%"
+max_length = 0
+editable = false
+secret = false
+
+[node name="Label0" type="Label" parent="FriSet"]
+
+margin/left = -141.0
+margin/top = 85.0
+margin/right = -27.0
+margin/bottom = 146.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label100" type="Label" parent="FriSet"]
+
+margin/left = 789.0
+margin/top = 85.0
+margin/right = 979.0
+margin/bottom = 146.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MassSet" type="Node2D" parent="."]
+
+transform/pos = Vector2( -54.9839, -288.453 )
+z/z = 5
+script/script = ExtResource( 8 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="Button+25" type="Button" parent="MassSet"]
+
+margin/left = 782.0
+margin/top = -5.0
+margin/right = 950.0
+margin/bottom = 68.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "+ 25"
+flat = false
+
+[node name="Button-25" type="Button" parent="MassSet"]
+
+margin/left = 104.0
+margin/top = -8.0
+margin/right = 272.0
+margin/bottom = 65.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "- 25"
+flat = false
+
+[node name="Sprite" type="Sprite" parent="MassSet"]
+
+transform/pos = Vector2( -107.608, 48.0973 )
+transform/scale = Vector2( 0.108949, 0.105697 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="MassSet"]
+
+margin/left = -231.0
+margin/top = -86.0
+margin/right = -79.0
+margin/bottom = -25.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+text = "Masa [Kg]:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LineEdit" type="LineEdit" parent="MassSet"]
+
+margin/left = 289.0
+margin/top = -3.0
+margin/right = 755.0
+margin/bottom = 68.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+max_length = 0
+editable = false
+secret = false
+
+[node name="SmallNode" type="Node2D" parent="."]
+
+transform/pos = Vector2( 580, -390.245 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="SmallSprite" type="Sprite" parent="SmallNode"]
+
+visibility/visible = false
+visibility/opacity = 0.7
+transform/scale = Vector2( 1.67996, 1.47715 )
+texture = ExtResource( 10 )
+
+[node name="ButtonCancel" type="Button" parent="SmallNode"]
+
+margin/left = -196.0
+margin/top = -24.0
+margin/right = 80.0
+margin/bottom = 69.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "Anuluj"
+flat = false
+
+[node name="ButtonOK" type="Button" parent="SmallNode"]
+
+margin/left = 102.0
+margin/top = -34.0
+margin/right = 208.0
+margin/bottom = 64.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 4 )
+toggle_mode = false
+text = "OK"
+flat = false
+
+[connection signal="pressed" from="RotSet/Button+15" to="RotSet" method="_on_15plus"]
+
+[connection signal="pressed" from="RotSet/Button-15" to="RotSet" method="_on_15minus"]
+
+[connection signal="pressed" from="RotSet/Button+45" to="RotSet" method="_on_45plus"]
+
+[connection signal="pressed" from="RotSet/Button-45" to="RotSet" method="_on_45minus"]
+
+[connection signal="value_changed" from="RotSet/HSlider" to="RotSet" method="_on_HSlider_value_changed"]
+
+[connection signal="pressed" from="FriSet/Button+25" to="FriSet" method="_on_25plus"]
+
+[connection signal="pressed" from="FriSet/Button-25" to="FriSet" method="_on_25minus"]
+
+[connection signal="value_changed" from="FriSet/HSlider" to="FriSet" method="_on_HSlider_value_changed"]
+
+[connection signal="pressed" from="MassSet/Button+25" to="MassSet" method="_on_25plus"]
+
+[connection signal="pressed" from="MassSet/Button-25" to="MassSet" method="_on_25minus"]
+
+[connection signal="pressed" from="SmallNode/ButtonCancel" to="." method="_on_Cancel"]
+
+[connection signal="pressed" from="SmallNode/ButtonOK" to="." method="_on_OK"]
+
+

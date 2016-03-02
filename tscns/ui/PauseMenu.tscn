@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://sprites/ui/Box.png" type="Texture" id=1]
+[ext_resource path="res://scripts/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/ubunt32.fnt" type="Font" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 1 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="Pause Menu" type="PopupPanel"]
+
+process/pause_mode = 2
+margin/left = -158.0
+margin/top = -359.0
+margin/right = 161.0
+margin/bottom = -97.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_styles/panel = SubResource( 1 )
+popup/exclusive = false
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+[node name="Label" type="Label" parent="."]
+
+margin/left = 58.0
+margin/top = 18.0
+margin/right = 254.0
+margin/bottom = 57.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Menu Pauzy:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="continue" type="Button" parent="."]
+
+margin/left = 61.0
+margin/top = 61.0
+margin/right = 248.0
+margin/bottom = 100.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+text = "Kontynuuj"
+flat = false
+
+[node name="help" type="Button" parent="."]
+
+margin/left = 46.0
+margin/top = 110.0
+margin/right = 271.0
+margin/bottom = 149.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = true
+is_pressed = true
+text = "Pokaż Pomoc"
+flat = false
+
+[node name="exit" type="Button" parent="."]
+
+margin/left = 48.0
+margin/top = 206.0
+margin/right = 273.0
+margin/bottom = 245.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = true
+is_pressed = true
+text = "Wyjdź z gry"
+flat = false
+
+[node name="help1" type="Button" parent="."]
+
+margin/left = 37.0
+margin/top = 157.0
+margin/right = 281.0
+margin/bottom = 196.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = true
+is_pressed = true
+text = "Lista Maszyn"
+flat = false
+
+[connection signal="pressed" from="continue" to="." method="on_continue"]
+
+[connection signal="pressed" from="help" to="." method="_on_help"]
+
+[connection signal="pressed" from="exit" to="." method="_on_exit"]
+
+[connection signal="pressed" from="help1" to="." method="_on_help1_pressed"]
+
+

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="19" version="1.1" version_name="Godot Engine v1.1.stable.custom_build">
+	<ext_resource path="res://scripts/dockPM.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/dock.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scripts/DPMbuttons.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/mechs/box100.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/mechs/Ball.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/rownia3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scripts/button_rownia.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/dwigIcon.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scripts/button_dwig.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/chain.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/mechs/ropeV.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scripts/preScaleBox.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/Box.png" type="Texture"></ext_resource>
+	<ext_resource path="res://fonts/ubunu64.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://scripts/prePosBox.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/ui/dwig05s.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/dwig05m.png" type="Texture"></ext_resource>
+	<ext_resource path="res://sprites/ui/dwig05e.png" type="Texture"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 15 </int>
+			<string> "conns" </string>
+			<int_array  len="90"> 				2, 1, 44, 43, 2, 0, 3, 1, 44, 45, 2, 0, 4, 4, 44, 46, 2, 0, 5, 5, 44, 47, 2, 0, 6, 1, 44, 48, 2, 0, 7, 1, 44, 49, 2, 0, 10, 8, 44, 50, 2, 0, 11, 8, 44, 51, 2, 0, 12, 8, 44, 52, 2, 0, 13, 8, 44, 53, 2, 0, 14, 8, 44, 54, 2, 0, 17, 15, 44, 55, 2, 0, 18, 15, 44, 56, 2, 0, 19, 15, 44, 57, 2, 0, 20, 15, 44, 54, 2, 0 </int_array>
+			<string> "names" </string>
+			<string_array  len="58">
+				<string> "DockPlayerMode" </string>
+				<string> "Node2D" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "z/z" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "offset" </string>
+				<string> "SpriteBg" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "BoxButton" </string>
+				<string> "Button" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "hint/tooltip" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "toggle_mode" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "BallButton" </string>
+				<string> "RowniaButton" </string>
+				<string> "DzwigniaButton" </string>
+				<string> "ChainButton" </string>
+				<string> "SpringButton" </string>
+				<string> "PreScaleBox" </string>
+				<string> "visibility/visible" </string>
+				<string> "Button1x1y" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "text" </string>
+				<string> "Button2x1y" </string>
+				<string> "Button1x2y" </string>
+				<string> "Button2x2y" </string>
+				<string> "Anuluj" </string>
+				<string> "PrePosBox" </string>
+				<string> "ButtonStart" </string>
+				<string> "ButtonMiddle" </string>
+				<string> "ButtonEnd" </string>
+				<string> "_on_box" </string>
+				<string> "pressed" </string>
+				<string> "_on_Ball" </string>
+				<string> "_on_RowniaButton" </string>
+				<string> "_on_Dzwignia" </string>
+				<string> "_on_Chain" </string>
+				<string> "_on_Spring" </string>
+				<string> "_on_1x1y" </string>
+				<string> "_on_2x1y" </string>
+				<string> "_on_1x2y" </string>
+				<string> "_on_2x2y" </string>
+				<string> "_on_Anuluj" </string>
+				<string> "_on_Start" </string>
+				<string> "_on_Middle" </string>
+				<string> "_on_End" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 21 </int>
+			<string> "nodes" </string>
+			<int_array  len="571"> 				-1, -1, 1, 0, -1, 6, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 0, 0, 0, 9, 8, -1, 5, 2, 6, 3, 7, 4, 8, 10, 9, 5, 10, 0, 0, 0, 12, 11, -1, 12, 13, 11, 14, 12, 15, 13, 16, 14, 17, 15, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 19, 24, 16, 0, 0, 0, 12, 25, -1, 12, 13, 20, 14, 12, 15, 21, 16, 22, 17, 15, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 23, 24, 16, 0, 0, 0, 12, 26, -1, 13, 13, 24, 14, 25, 15, 26, 16, 27, 17, 28, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 29, 24, 16, 5, 30, 0, 0, 0, 12, 27, -1, 12, 13, 31, 14, 25, 15, 32, 16, 33, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 34, 24, 16, 5, 35, 0, 0, 0, 12, 28, -1, 12, 13, 36, 14, 37, 15, 38, 16, 39, 17, 40, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 41, 24, 16, 0, 0, 0, 12, 29, -1, 12, 13, 42, 14, 12, 15, 43, 16, 44, 17, 45, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 46, 24, 16, 0, 0, 0, 1, 30, -1, 5, 31, 16, 2, 47, 3, 48, 5, 49, 6, 50, 0, 8, 0, 9, 9, -1, 3, 2, 51, 3, 52, 10, 53, 0, 8, 0, 12, 32, -1, 13, 13, 54, 14, 55, 15, 56, 16, 57, 17, 58, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 60, 24, 16, 0, 8, 0, 12, 35, -1, 13, 13, 54, 14, 61, 15, 56, 16, 62, 17, 58, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 63, 24, 16, 0, 8, 0, 12, 36, -1, 13, 13, 54, 14, 64, 15, 56, 16, 65, 17, 58, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 66, 24, 16, 0, 8, 0, 12, 37, -1, 13, 13, 54, 14, 67, 15, 56, 16, 68, 17, 58, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 69, 24, 16, 0, 8, 0, 12, 38, -1, 12, 13, 54, 14, 70, 15, 56, 16, 71, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 72, 24, 16, 0, 0, 0, 1, 39, -1, 5, 31, 16, 2, 73, 3, 74, 5, 75, 6, 76, 0, 15, 0, 9, 9, -1, 3, 2, 77, 3, 78, 10, 53, 0, 15, 0, 12, 40, -1, 12, 13, 79, 14, 80, 15, 81, 16, 82, 17, 83, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 84, 24, 17, 0, 15, 0, 12, 41, -1, 12, 13, 79, 14, 85, 15, 81, 16, 86, 17, 83, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 87, 24, 17, 0, 15, 0, 12, 42, -1, 12, 13, 88, 14, 89, 15, 38, 16, 90, 17, 83, 18, 16, 19, 17, 20, 18, 21, 18, 22, 16, 23, 91, 24, 17, 0, 15, 0, 12, 38, -1, 12, 13, 92, 14, 93, 15, 94, 16, 95, 18, 16, 19, 17, 20, 18, 21, 18, 33, 59, 22, 16, 34, 72, 24, 16, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="96" shared="false">
+				<vector2> 433.634, 51.7656 </vector2>
+				<vector2> 1, 0.56018 </vector2>
+				<int> 5 </int>
+				<resource  resource_type="Script" path="res://scripts/dockPM.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "Script" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -496.663, -209.768 </vector2>
+							<string> "snap_grid" </string>
+							<bool> False </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.735092 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
+				<vector2> 0, -250 </vector2>
+				<vector2> -75.9297, 11.4608 </vector2>
+				<vector2> 1.19516, 1.07693 </vector2>
+				<int> -1 </int>
+				<resource  resource_type="Texture" path="res://sprites/ui/dock.png">  </resource>
+				<resource  resource_type="Script" path="res://scripts/DPMbuttons.gd">  </resource>
+				<real> -417 </real>
+				<real> -72 </real>
+				<real> -297 </real>
+				<real> 64 </real>
+				<string> "Szescian" </string>
+				<bool> False </bool>
+				<bool> True </bool>
+				<int> 2 </int>
+				<resource  resource_type="Texture" path="res://sprites/mechs/box100.png">  </resource>
+				<real> -288 </real>
+				<real> -195 </real>
+				<real> 71 </real>
+				<resource  resource_type="Texture" path="res://sprites/mechs/Ball.png">  </resource>
+				<real> -188 </real>
+				<real> -70 </real>
+				<real> -64 </real>
+				<real> 67 </real>
+				<string> "Rownia Pochyla" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/rownia3.png">  </resource>
+				<resource  resource_type="Script" path="res://scripts/button_rownia.gd">  </resource>
+				<real> -58 </real>
+				<real> 58 </real>
+				<real> 68 </real>
+				<resource  resource_type="Texture" path="res://sprites/ui/dwigIcon.png">  </resource>
+				<resource  resource_type="Script" path="res://scripts/button_dwig.gd">  </resource>
+				<real> 65 </real>
+				<real> -68 </real>
+				<real> 157 </real>
+				<real> 66 </real>
+				<string> "Wachadłlo" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/chain.png">  </resource>
+				<real> 163 </real>
+				<real> 249 </real>
+				<real> 69 </real>
+				<string> "Sprezyna z Obciaznikiem" </string>
+				<resource  resource_type="Texture" path="res://sprites/mechs/ropeV.png">  </resource>
+				<vector2> -126.374, 235.705 </vector2>
+				<vector2> 0.271905, 0.388805 </vector2>
+				<resource  resource_type="Script" path="res://scripts/preScaleBox.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_group_" </string>
+					<bool> True </bool>
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 1.62462, 168.908 </vector2>
+				<vector2> 1.17691, 1.55836 </vector2>
+				<resource  resource_type="Texture" path="res://sprites/ui/Box.png">  </resource>
+				<real> -242 </real>
+				<real> -338 </real>
+				<real> 230 </real>
+				<real> -148 </real>
+				<string> "Skala" </string>
+				<resource  resource_type="Font" path="res://fonts/ubunu64.fnt">  </resource>
+				<string> "x 184, y 171" </string>
+				<real> -128 </real>
+				<real> 62 </real>
+				<string> "x 386, y 171" </string>
+				<real> 82 </real>
+				<real> 272 </real>
+				<string> "x 184, y 240" </string>
+				<real> 292 </real>
+				<real> 482 </real>
+				<string> "x 386, y 240" </string>
+				<real> 502 </real>
+				<real> 692 </real>
+				<string> "Anuluj" </string>
+				<vector2> -0.531253, 292.689 </vector2>
+				<vector2> 0.367822, 0.525785 </vector2>
+				<resource  resource_type="Script" path="res://scripts/prePosBox.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_group_" </string>
+					<bool> True </bool>
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 16.595, 30.9654 </vector2>
+				<vector2> 0.852146, 1.19149 </vector2>
+				<real> -178 </real>
+				<real> -303 </real>
+				<real> 152 </real>
+				<real> -175 </real>
+				<string> "miejsce przylozenia" </string>
+				<resource  resource_type="Texture" path="res://sprites/ui/dwig05s.png">  </resource>
+				<real> -131 </real>
+				<real> -3 </real>
+				<resource  resource_type="Texture" path="res://sprites/ui/dwig05m.png">  </resource>
+				<real> -173 </real>
+				<real> 41 </real>
+				<real> 169 </real>
+				<resource  resource_type="Texture" path="res://sprites/ui/dwig05e.png">  </resource>
+				<real> -201 </real>
+				<real> 182 </real>
+				<real> 271 </real>
+				<real> 372 </real>
+			</array>
+			<string> "version" </string>
+			<int> 1 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

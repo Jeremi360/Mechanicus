@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/prespring.gd" type="Script" id=1]
+[ext_resource path="res://sprites/mechs/chainN.png" type="Texture" id=2]
+[ext_resource path="res://sprites/mechs/ropeV.png" type="Texture" id=3]
+[ext_resource path="res://sprites/mechs/KG.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 70, 233 )
+
+[node name="Spring" type="RigidBody2D"]
+
+transform/pos = Vector2( 376.853, 111.332 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 215 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script", "_edit_group_":true }
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1.13672, 13.8013 )
+texture = ExtResource( 2 )
+
+[node name="Sprite 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 55 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 105 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 162 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 207 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 255 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 281 )
+z/z = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite 8" type="Sprite" parent="."]
+
+transform/pos = Vector2( -2, 373 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 215 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = -1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 0, 187 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+
+[node name="Position2D" type="Position2D" parent="."]
+
+transform/pos = Vector2( 104, 200 )
+
+

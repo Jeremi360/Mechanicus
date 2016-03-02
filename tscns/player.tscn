@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/playerM.gd" type="Script" id=1]
+[ext_resource path="res://sprites/test/playerKelly.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/hud_gem_green18.png" type="Texture" id=3]
+[ext_resource path="res://sprites/ui/hud_gem_blue18.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 25.0
+height = 35.0
+
+[node name="Player" type="RigidBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, -0, 0, 1, -1.2175, 2 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 2
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+speed = 100
+accel = 5
+jumpf = 100
+fly = false
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -1.2175, 2 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = -1
+
+[node name="SpawnPoint" type="Position2D" parent="."]
+
+transform/pos = Vector2( 139.123, -182.883 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+offset = Vector2( 0, -200 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="Button" type="Button" parent="."]
+
+margin/left = -20.0
+margin/top = 8.0
+margin/right = 19.0
+margin/bottom = 34.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Button1" type="Button" parent="."]
+
+margin/left = -18.0
+margin/top = -39.0
+margin/right = 21.0
+margin/bottom = -7.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+icon = ExtResource( 4 )
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_edit"]
+
+[connection signal="pressed" from="Button1" to="." method="on_info"]
+
+
