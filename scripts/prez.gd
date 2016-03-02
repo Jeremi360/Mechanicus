@@ -19,12 +19,12 @@ var dwigm
 var gui
 
 func _ready():
-	box    = preload("res://xmls/mechs/box.xml")
-	rown   = preload("res://xmls/mechs/rownia03x2.xml")
-	ball   = preload("res://xmls/mechs/ball.xml")
-	chain  = preload("res://xmls/mechs/chain.xml")
-	spring = preload("res://xmls/mechs/spring.xml")
-	dwigm  = preload("res://xmls/mechs/dwignew.xml")
+	box    = preload("res://tscns/mechs/box.tscn")
+	rown   = preload("res://tscns/mechs/rownia03x2.tscn")
+	ball   = preload("res://tscns/mechs/ball.tscn")
+	chain  = preload("res://tscns/mechs/chain.tscn")
+	spring = preload("res://tscns/mechs/spring.tscn")
+	dwigm  = preload("res://tscns/mechs/dwignew.tscn")
 	
 	timer  = get_node("Timer")
 	timer.connect("timeout", self, "PrezZ")
