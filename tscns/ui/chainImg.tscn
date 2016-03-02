@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/chain.gd" type="Script" id=1]
+[ext_resource path="res://sprites/mechs/chainN.png" type="Texture" id=2]
+[ext_resource path="res://sprites/mechs/chainF.png" type="Texture" id=3]
+[ext_resource path="res://sprites/mechs/chainD.png" type="Texture" id=4]
+[ext_resource path="res://sprites/mechs/Ball.png" type="Texture" id=5]
+
+[node name="Chain" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1.13672, 13.8013 )
+texture = ExtResource( 2 )
+
+[node name="Sprite 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 67 )
+texture = ExtResource( 3 )
+
+[node name="Sprite 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 40 )
+texture = ExtResource( 4 )
+
+[node name="Sprite 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 123 )
+texture = ExtResource( 3 )
+
+[node name="Sprite 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 98 )
+texture = ExtResource( 4 )
+
+[node name="Sprite 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 154 )
+z/z = 1
+texture = ExtResource( 4 )
+
+[node name="Sprite 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 181 )
+texture = ExtResource( 3 )
+
+[node name="Sprite 8" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 241 )
+texture = ExtResource( 3 )
+
+[node name="Sprite 9" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 211 )
+texture = ExtResource( 4 )
+
+[node name="Sprite 10" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 275.42 )
+z/z = 1
+texture = ExtResource( 4 )
+
+[node name="Sprite 11" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 307 )
+texture = ExtResource( 3 )
+
+[node name="Sprite 12" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 340 )
+z/z = 1
+texture = ExtResource( 4 )
+
+[node name="Sprite 13" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 377 )
+texture = ExtResource( 5 )
+flip_v = true
+
+

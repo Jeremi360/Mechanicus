@@ -12,8 +12,8 @@
 [ext_resource path="res://fonts/ubunt32I.fnt" type="Font" id=10]
 [ext_resource path="res://fonts/ubunt32.fnt" type="Font" id=11]
 [ext_resource path="res://sprites/mechs/rownia3.png" type="Texture" id=12]
-[ext_resource path="res://xmls/ui/chainImg.xml" type="PackedScene" id=13]
-[ext_resource path="res://xmls/ui/springImg.xml" type="PackedScene" id=14]
+[ext_resource path="res://tscns/ui/chainImg.tscn" type="PackedScene" id=13]
+[ext_resource path="res://tscns/ui/springImg.tscn" type="PackedScene" id=14]
 
 [node name="MechList" type="Node2D"]
 
@@ -23,6 +23,7 @@ transform/scale = Vector2( 1, 0.56018 )
 z/z = 5
 script/script = ExtResource( 1 )
 __meta__ = { "__editor_plugin_screen__":"2D" }
+offset = Vector2( 0, -200 )
 debug = false
 move = true
 
@@ -274,10 +275,6 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 __meta__ = { "_editor_collapsed":true }
 
-[node name="Chain" parent="Page4" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 432.133, 152.306 )
-
 [node name="Label" type="RichTextLabel" parent="Page4"]
 
 margin/left = -321.0
@@ -296,6 +293,11 @@ bbcode/enabled = true
 bbcode/bbcode = "[b]Wahadło fizyczne[/b]\n\n[img]res://wiki/WahM.png[/img]\n\nWahadło fizyczne to punkt masa poruszający się po okręgu w płaszczyźnie pionowej w jednorodnym polu grawitacyjnym.\nRównanie ruchu wahadła określa wzór:\n\n[img]res://wiki/5c5587d4aa1191ff7d0dbcd59f327f44.png[/img]\n\ngdzie:\n\n - [img]res://wiki/c9cf297b564a4826c1c4bbcb86bcba3c.png[/img] – kąt odchylenia wahadła od pionu,\n\n - [i]g[/i] – przyspieszenie ziemskie,\n \n - [i]m[/i] - masa wahadła\n\n - [i]a[/i] – długość nici."
 visible_characters = -1
 
+[node name="Chain" parent="Page4" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 417.546, 250.447 )
+transform/scale = Vector2( 1, 1 )
+
 [node name="Page5" type="Control" parent="."]
 
 visibility/visible = false
@@ -307,11 +309,6 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 __meta__ = { "_editor_collapsed":true }
-
-[node name="Spring" parent="Page5" instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 371.72, 142.884 )
-transform/scale = Vector2( 0.709833, 0.927185 )
 
 [node name="Label" type="RichTextLabel" parent="Page5"]
 
@@ -330,6 +327,10 @@ custom_fonts/normal_font = ExtResource( 11 )
 bbcode/enabled = true
 bbcode/bbcode = "[b]Masa na sprężynie[/b]\n\n[img]res://wiki/Rys1.png[/img] \n\nJest to ciało zawieszone na sprężynie, które może wykonywać drgania swobodne pod wpływem działającej na ciało sprężyny.\n\nJeżeli siła sprężystości sprężyny jest proporcjonalna do wychylenia ciała z położenia równowagi, to drgania są drganiami harmonicznymi prostymi.\nWarunek ten jest dobrze spełniony, jeżeli sprężyna nie zostanie rozciągnięta zbyt mocno (naprężenia w sprężynie są poniżej granicy plastyczności).\nDla takich drgań ich okres jest niezależny od ciężaru ciała (jest niezmienny np. na różnych planetach), natomiast zależy od masy m ciała i współczynnika sprężystości sprężyny [i]k[/i].\n\nOkres tych drgań wyraża wzór:\n\n[img]res://wiki/000ec11dd02aed66d342025bc953f5cb.png[/img]\n\ngdzie:\n\n - [i]T[/i] okres drgań wahadła sprężynowego.\n\nZ powyższego wzoru wynika, że im większa masa zawieszona jest na sprężynie i mniejszy współczynnik sprężystości (np. zastosowano miękką sprężynę), tym okres drgań jest większy."
 visible_characters = -1
+
+[node name="Spring" parent="Page5" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 395.225, 224.629 )
 
 [connection signal="pressed" from="Control/GoToPage1" to="." method="_go_to_page" binds= [ 1 ]]
 
